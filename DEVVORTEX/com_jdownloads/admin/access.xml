@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<access component="com_jdownloads">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="COM_JDOWNLOADS_ACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.options" title="COM_JDOWNLOADS_OPTIONS" description="COM_JDOWNLOADS_OPTIONS_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="COM_JDOWNLOADS_ACTION_MANAGE_COMPONENT_DESC" />
+		<action name="core.create" title="COM_JDOWNLOADS_ACTION_CREATE" description="COM_JDOWNLOADS_ACTION_CREATE_DESC" />
+		<action name="core.delete" title="COM_JDOWNLOADS_ACTION_DELETE" description="COM_JDOWNLOADS_ACTION_DELETE_DESC" />
+		<action name="core.edit" title="COM_JDOWNLOADS_ACTION_EDIT" description="COM_JDOWNLOADS_ACTION_EDIT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_JDOWNLOADS_ACTION_EDITSTATE_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="COM_JDOWNLOADS_ACTION_EDITOWN_DESC" />
+        <action name="download" title="COM_JDOWNLOADS_ACTION_DOWNLOAD" description="COM_JDOWNLOADS_ACTION_DOWNLOAD_GENERAL_DESC" />
+        <action name="core.edit.value" title="COM_JDOWNLOADS_EDITVALUE" description="COM_JDOWNLOADS_EDITVALUE_COMPONENT_DESC" />
+		<action name="edit.user.limits"   title="COM_JDOWNLOADS_ACTION_EDIT_USER_LIMITS"   description="COM_JDOWNLOADS_ACTION_EDIT_USER_LIMITS_DESC" />
+	</section>
+    <section name="category">
+        <action name="core.create" title="COM_JDOWNLOADS_ACTION_CREATE" description="COM_JDOWNLOADS_ACTION_CREATE_COMPONENT_DESC" />
+        <action name="core.delete" title="COM_JDOWNLOADS_ACTION_DELETE" description="COM_JDOWNLOADS_ACTION_DELETE_COMPONENT_DESC" />
+        <action name="core.edit" title="COM_JDOWNLOADS_ACTION_EDIT" description="COM_JDOWNLOADS_ACTION_EDIT_COMPONENT_DESC" />
+        <action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_JDOWNLOADS_ACTION_EDITSTATE_CAT_DESC" />
+        <action name="core.edit.own" title="JACTION_EDITOWN" description="COM_JDOWNLOADS_ACTION_EDITOWN_CAT_DESC" />
+        <action name="download" title="COM_JDOWNLOADS_ACTION_DOWNLOAD" description="COM_JDOWNLOADS_ACTION_DOWNLOAD_CATEGORY_DESC" />
+    </section>
+    <section name="download">
+        <action name="core.delete" title="COM_JDOWNLOADS_ACTION_DELETE" description="COM_JDOWNLOADS_ACTION_DELETE_ITEM_DESC" />
+        <action name="core.edit" title="COM_JDOWNLOADS_ACTION_EDIT" description="COM_JDOWNLOADS_ACTION_EDIT_ITEM_DESC" />
+        <action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_JDOWNLOADS_ACTION_EDITSTATE_DESC" />
+        <action name="core.edit.own" title="JACTION_EDITOWN" description="COM_JDOWNLOADS_ACTION_EDITOWN_DESC" />
+        <action name="download" title="COM_JDOWNLOADS_ACTION_DOWNLOAD" description="COM_JDOWNLOADS_ACTION_DOWNLOAD_DESC" />
+    </section>
+    <section name="fieldgroup">
+        <action name="core.create" title="JACTION_CREATE" description="COM_FIELDS_GROUP_PERMISSION_CREATE_DESC" />
+        <action name="core.delete" title="JACTION_DELETE" description="COM_FIELDS_GROUP_PERMISSION_DELETE_DESC" />
+        <action name="core.edit" title="JACTION_EDIT" description="COM_FIELDS_GROUP_PERMISSION_EDIT_DESC" />
+        <action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_FIELDS_GROUP_PERMISSION_EDITSTATE_DESC" />
+        <action name="core.edit.own" title="JACTION_EDITOWN" description="COM_FIELDS_GROUP_PERMISSION_EDITOWN_DESC" />
+        <action name="core.edit.value" title="JACTION_EDITVALUE" description="COM_FIELDS_GROUP_PERMISSION_EDITVALUE_DESC" />
+    </section>
+    <section name="field">
+        <action name="core.delete" title="JACTION_DELETE" description="COM_FIELDS_FIELD_PERMISSION_DELETE_DESC" />
+        <action name="core.edit" title="JACTION_EDIT" description="COM_FIELDS_FIELD_PERMISSION_EDIT_DESC" />
+        <action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_FIELDS_FIELD_PERMISSION_EDITSTATE_DESC" />
+        <action name="core.edit.value" title="JACTION_EDITVALUE" description="COM_FIELDS_FIELD_PERMISSION_EDITVALUE_DESC" />
+    </section>        
+</access>

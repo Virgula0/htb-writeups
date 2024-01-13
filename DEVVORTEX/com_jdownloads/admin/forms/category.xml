@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		$Id: category.xml - edit category
+	-->
+<form>
+	
+	<fieldset addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field">
+
+		<field name="id" 
+            type="text" 
+            default="0" 
+            label="COM_JDOWNLOADS_ID"
+			readonly="true" 
+            class="readonly"
+			description="" 
+		/>
+
+		<field name="title" 
+            type="text" 
+            class="input-xxlarge input-large-text"
+			size="40" 
+            label="COM_JDOWNLOADS_TITLE"
+			description="COM_JDOWNLOADS_EDIT_CAT_TITLE_DESC" 
+            required="true"
+			maxlength="255"
+		/>
+            
+        <field name="alias" 
+            type="text" 
+            class="inputbox"
+            size="40"
+			hint="COM_JDOWNLOADS_ALIAS_PLACEHOLDER"			
+            label="COM_JDOWNLOADS_ALIAS"
+            description="COM_JDOWNLOADS_FIELD_ALIAS_DESC" 
+		/>
+            
+		<field name="cat_dir_parent"
+            type="JDCategoryPath" 
+            class="readonly" 
+			size="40" 
+            label="COM_JDOWNLOADS_EDIT_CAT_DIR_TITLE" 
+            readonly="true" 
+			description="COM_JDOWNLOADS_EDIT_CAT_DIR_TITLE_MSG"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field" 
+		/>
+
+        <field name="cat_dir"
+            type="text"
+            class="input" 
+            size="40"
+            label="COM_JDOWNLOADS_EDIT_CAT_DIR_TITLE"
+            required="true" 
+            description="COM_JDOWNLOADS_EDIT_CAT_DIR_TITLE_DESC2" 
+		/>
+
+        <field name="parent_id"
+            type="JDCategoryParent"
+            label="COM_JDOWNLOADS_EDIT_CAT_PARENT_LABEL"
+            description="COM_JDOWNLOADS_EDIT_CAT_PARENT_DESK"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            class="inputbox"
+		/>
+            
+        <field
+            name="access"
+            type="accesslevel"
+            label="COM_JDOWNLOADS_ACCESS"
+            description="COM_JDOWNLOADS_ACCESS_DESC"
+            class="inputbox"
+		/>
+            
+        <field 
+            name="tags"
+            type="tag"
+            label="JTAG"
+            multiple="true"
+		/>              
+            
+        <field name="description"
+            type="editor" 
+            buttons="true" 
+            hide="pagebreak,readmore"
+			filter="\Joomla\CMS\Component\ComponentHelper::filterText"
+			label="COM_JDOWNLOADS_DESCRIPTION" 
+            description="" 
+		/>
+            
+        <field name="published"
+            type="list"
+            label="JSTATUS"
+            description="COM_JDOWNLOADS_FIELD_STATE_DESC"
+            class="form-select-color-state"
+            size="1"
+            default="1"
+			validate="options"
+			>
+            <option value="1">COM_JDOWNLOADS_PUBLISHED</option>
+            <option value="0">COM_JDOWNLOADS_UNPUBLISHED</option>
+        </field>
+
+        <field name="language"
+            type="contentlanguage"
+            label="COM_JDOWNLOADS_CAT_LANGUAGE"
+            description="COM_JDOWNLOADS_LANGUAGE_DESC2"
+            >
+            <option value="*">COM_JDOWNLOADS_ALL</option>
+        </field>
+       
+        <field name="ordering"
+            type="ordering" 
+            class="inputbox"
+            label="JFIELD_ORDERING_LABEL"
+            description="JFIELD_ORDERING_DESC" 
+		/>
+            
+        <field 
+			name="rules"
+			type="rules"
+            id="rules"
+            label=""
+            translate_label="false"
+			filter="rules"
+			component="com_jdownloads"
+			section="category" 
+			validate="rules" 
+		/>                        
+       
+        <field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+        <field name="level" type="hidden" filter="unset"/>
+        <field name="lft" type="hidden" filter="unset"/>
+        <field name="rgt" type="hidden" filter="unset"/>
+        <field name="asset_id" type="hidden" filter="unset" />
+		<field name="params" type="hidden" filter="unset" />
+            
+        <field
+            name="metadesc"
+            type="textarea"
+            label="COM_JDOWNLOADS_META_DESCRIPTION_LABEL"
+            description="COM_JDOWNLOADS_META_DESCRIPTION_DESC"
+            rows="3"
+            cols="30"
+		/>
+
+        <field
+            name="metakey"
+            type="textarea"
+            label="COM_JDOWNLOADS_META_KEYWORDS_LABEL"
+            description="COM_JDOWNLOADS_META_KEYWORDS_DESC"
+            rows="3"
+            cols="30"
+		/>
+
+        <field
+            name="created_user_id"
+            type="user"
+            label="COM_JDOWNLOADS_CREATED_BY"
+            desc=""
+        />
+
+        <field
+			name="created_time"
+			type="calendar"
+			label="COM_JDOWNLOADS_CREATED_DATE"
+			translateformat="true"
+			showtime="true"
+			size="22"
+			filter="user_utc"
+		/>
+
+        <field
+            name="modified_user_id"
+            type="user"
+            label="COM_JDOWNLOADS_MODIFIED_BY"
+            class="readonly"
+            readonly="true"
+            filter="unset"
+		/>
+
+        <field
+            name="modified_time"
+            type="calendar"
+            label="COM_JDOWNLOADS_MODIFIED_DATE"
+            class="readonly"
+			translateformat="true"
+			showtime="true"
+			size="22"
+			readonly="true"
+			filter="user_utc"
+		/> 
+            
+        <field
+            name="views"
+            type="text"
+            label="COM_JDOWNLOADS_VIEWS"
+            class="readonly"
+            filter="unset"
+            readonly="true" 
+		/> 
+            
+        <field name="password"
+            type="text"
+            class="input" 
+            size="30"
+            label="COM_JDOWNLOADS_EDIT_CAT_PASSWORD_LABEL"
+            required="false" 
+            description="COM_JDOWNLOADS_EDIT_CAT_PASSWORD_DESC" 
+		/>
+        
+        <field name="pic"
+            type="JDCatIcon" 
+            label="COM_JDOWNLOADS_CATSLIST_PIC" 
+            description="COM_JDOWNLOADS_PIC_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field" 
+		/>
+                    
+        <field name="picnew" 
+            type="file" 
+            label="COM_JDOWNLOADS_PIC_NEW"
+            size="30"
+            description="COM_JDOWNLOADS_PIC_NEW_DESC" 
+		/>        
+        
+        <field name="notes"
+			type="textarea" 
+			rows="3"
+			cols="30" 
+			class="inputbox"
+			filter=""
+			label="COM_JDOWNLOADS_INTERNAL_NOTE_LABEL" 
+			description="" 
+		/>
+                
+        <field name="robots"
+            type="list"
+            label="COM_JDOWNLOADS_ROBOTS_LABEL"
+            description="COM_JDOWNLOADS_ROBOTS_DESC"
+			validate="options"
+            >
+            <option value="">COM_JDOWNLOADS_USE_GLOBAL</option>
+            <option value="index, follow">COM_JDOWNLOADS_INDEX_FOLLOW</option>
+            <option value="noindex, follow">COM_JDOWNLOADS_NOINDEX_FOLLOW</option>
+            <option value="index, nofollow">COM_JDOWNLOADS_INDEX_NOFOLLOW</option>
+            <option value="noindex, nofollow">COM_JDOWNLOADS_NOINDEX_NOFOLLOW</option>
+        </field>            
+
+        <field
+            label="" 
+            name="spacer"
+            description=""
+            hr="true"
+            type="spacer" 
+		/>                
+            
+        <field name="permissions_warning"
+            type="note"
+            label=""
+            description="COM_JDOWNLOADS_SET_CREATE_PERMISSIONS_WARNING"
+            class="alert"
+        />            
+	</fieldset>
+</form>

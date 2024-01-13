@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="administrator" method="upgrade" position="jdcpanel">
+        <name>jDownloads Stats for Administrators</name>
+        <author>Arno Betz</author>
+        <creationDate>2023-04-13</creationDate>
+        <copyright>(C) 2007-2023 Arno Betz. All rights reserved.</copyright>
+        <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+        <authorEmail>info@jdownloads.com</authorEmail>
+        <authorUrl>www.jDownloads.com</authorUrl>
+        <version>4.0.25</version>
+        <description>MOD_JDOWNLOADS_ADMIN_STATS_DESC</description>
+		<namespace path="src">JDownloads\Module\JDownloadsAdminStats</namespace>
+        <files>
+            <filename module="mod_jdownloads_admin_stats">mod_jdownloads_admin_stats.php</filename>
+            <filename>mod_jdownloads_admin_stats.xml</filename>
+            <folder>tmpl</folder>
+            <folder>language</folder>
+			<folder>src</folder>
+        </files>
+		<!-- <help key="Admin_Modules:_ADMIN_STATS" /> -->
+        <config>
+            <fields name="params">
+                <fieldset name="basic">
+                    <field name="view_latest" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="MOD_JDOWNLOADS_ADMIN_STATS_VIEW_LATEST_TAB">
+                        <option value="0">MOD_JDOWNLOADS_ADMIN_STATS_NO</option>
+                        <option value="1">MOD_JDOWNLOADS_ADMIN_STATS_YES</option>
+                    </field>
+                    <field name="view_popular" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="MOD_JDOWNLOADS_ADMIN_STATS_VIEW_POPULAR_TAB">
+                        <option value="0">MOD_JDOWNLOADS_ADMIN_STATS_NO</option>
+                        <option value="1">MOD_JDOWNLOADS_ADMIN_STATS_YES</option>
+                    </field>
+                    <field name="view_featured" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="MOD_JDOWNLOADS_ADMIN_STATS_VIEW_FEATURED_TAB">
+                        <option value="0">MOD_JDOWNLOADS_ADMIN_STATS_NO</option>
+                        <option value="1">MOD_JDOWNLOADS_ADMIN_STATS_YES</option>
+                    </field>                    
+                    <field name="view_most_rated" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="MOD_JDOWNLOADS_ADMIN_STATS_VIEW_MOST_RATED_TAB">
+                        <option value="0">MOD_JDOWNLOADS_ADMIN_STATS_NO</option>
+                        <option value="1">MOD_JDOWNLOADS_ADMIN_STATS_YES</option>
+                    </field>
+                    <field name="view_top_rated" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="MOD_JDOWNLOADS_ADMIN_STATS_VIEW_TOP_RATED_TAB">
+                        <option value="0">MOD_JDOWNLOADS_ADMIN_STATS_NO</option>
+                        <option value="1">MOD_JDOWNLOADS_ADMIN_STATS_YES</option>
+                    </field>
+                    <field name="amount_items" type="integer" default="5" label="MOD_JDOWNLOADS_ADMIN_STATS_AMOUNT_ITEMS_LABEL" description="MOD_JDOWNLOADS_ADMIN_STATS_AMOUNT_ITEMS_DESC" first="1" last="25" step="1" />
+                    <field name="view_statistics" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="MOD_JDOWNLOADS_ADMIN_STATS_VIEW_STATISTICS_TAB">
+                        <option value="0">MOD_JDOWNLOADS_ADMIN_STATS_NO</option>
+                        <option value="1">MOD_JDOWNLOADS_ADMIN_STATS_YES</option>
+                    </field>
+                    <field name="view_monitoring_log" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="MOD_JDOWNLOADS_ADMIN_STATS_VIEW_MONITORING_LOG_TAB">
+                        <option value="0">MOD_JDOWNLOADS_ADMIN_STATS_NO</option>
+                        <option value="1">MOD_JDOWNLOADS_ADMIN_STATS_YES</option>
+                    </field>
+                    <field name="view_restore_log" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="MOD_JDOWNLOADS_ADMIN_STATS_VIEW_RESTORE_LOG_TAB">
+                        <option value="0">MOD_JDOWNLOADS_ADMIN_STATS_NO</option>
+                        <option value="1">MOD_JDOWNLOADS_ADMIN_STATS_YES</option>
+                    </field>
+                    <field name="view_install_log" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="MOD_JDOWNLOADS_ADMIN_STATS_VIEW_INSTALL_LOG_TAB">
+                        <option value="0">MOD_JDOWNLOADS_ADMIN_STATS_NO</option>
+                        <option value="1">MOD_JDOWNLOADS_ADMIN_STATS_YES</option>
+                    </field>
+                    <field name="view_server_info" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="MOD_JDOWNLOADS_ADMIN_STATS_VIEW_SERVER_INFO_TAB">
+                        <option value="0">MOD_JDOWNLOADS_ADMIN_STATS_NO</option>
+                        <option value="1">MOD_JDOWNLOADS_ADMIN_STATS_YES</option>
+                    </field>
+					<field name="view_check_results" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="MOD_JDOWNLOADS_ADMIN_STATS_VIEW_SERVER_CHECK_HINT" description="MOD_JDOWNLOADS_ADMIN_STATS_VIEW_SERVER_CHECK_HINT_DESC">
+                        <option value="0">MOD_JDOWNLOADS_ADMIN_STATS_NO</option>
+                        <option value="1">MOD_JDOWNLOADS_ADMIN_STATS_YES</option>
+                    </field>
+                </fieldset>
+                <fieldset name="advanced">
+                    <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC" 
+                    />
+                    <field
+                        name="moduleclass_sfx"
+                        type="textarea" 
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                        rows="3"
+                    />
+                    <field name="cache" type="list" default="1" label="MOD_JDOWNLOADS_ADMIN_STATS_CACHE_LABEL" description="MOD_JDOWNLOADS_ADMIN_STATS_CACHE_DESCRIPTION">
+                        <option value="0">MOD_JDOWNLOADS_ADMIN_STATS_CACHE_NO_CACHING</option>
+                        <option value="1">MOD_JDOWNLOADS_ADMIN_STATS_CACHE_USE_GLOBAL</option>
+                    </field>
+                    <field name="cache_time" type="text" default="900" label="MOD_JDOWNLOADS_ADMIN_STATS_CACHE_TIME_LABEL" description="MOD_JDOWNLOADS_ADMIN_STATS_CACHE_TIME_DESCRIPTION"/>
+                </fieldset>
+            </fields>
+        </config>
+</extension>

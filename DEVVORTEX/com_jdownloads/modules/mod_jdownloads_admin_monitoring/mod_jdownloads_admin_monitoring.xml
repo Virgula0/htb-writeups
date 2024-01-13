@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="administrator" version="3.1" method="upgrade" position="jdcpanel">
+        <name>jDownloads Administrator Monitoring</name>
+        <author>Arno Betz</author>
+        <creationDate>2022-12-20</creationDate>
+        <copyright>(C) 2007-2022 Arno Betz. All rights reserved.</copyright>
+        <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+        <authorEmail>info@jdownloads.com</authorEmail>
+        <authorUrl>www.jDownloads.com</authorUrl>
+        <version>4.0</version>
+        <description>MOD_JDOWNLOADS_ADMIN_MONITORING_DESC</description>
+		<namespace path="src">JDownloads\Module\JDownloadsAdminMonitoring</namespace>
+		<files>
+            <filename module="mod_jdownloads_admin_monitoring">mod_jdownloads_admin_monitoring.php</filename>
+            <filename>mod_jdownloads_admin_monitoring.xml</filename>
+            <folder>tmpl</folder>
+            <folder>language</folder>
+        </files>
+		<!-- <help key="Admin_Modules:_ADMIN_MONITORING" /> -->
+        <config>
+            <fields name="params">
+                <fieldset name="advanced">
+                    <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC" 
+                    />
+                    <field
+                        name="moduleclass_sfx"
+                        type="textarea" 
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                        rows="3"
+                    />
+                    <field name="cache" type="list" default="1" label="MOD_JDOWNLOADS_ADMIN_MONITORING_CACHE_LABEL" description="MOD_JDOWNLOADS_ADMIN_MONITORING_CACHE_DESCRIPTION">
+                        <option value="0">MOD_JDOWNLOADS_ADMIN_MONITORING_CACHE_NO_CACHING</option>
+                        <option value="1">MOD_JDOWNLOADS_ADMIN_MONITORING_CACHE_USE_GLOBAL</option>
+                    </field>
+                    <field name="cache_time" type="text" default="900" label="MOD_JDOWNLOADS_ADMIN_MONITORING_CACHE_TIME_LABEL" description="MOD_JDOWNLOADS_ADMIN_MONITORING_CACHE_TIME_DESCRIPTION"/>
+                </fieldset>
+            </fields>
+        </config>
+</extension>

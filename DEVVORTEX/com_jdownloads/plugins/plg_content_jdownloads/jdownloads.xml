@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+	<name>plg_content_jdownloads</name>
+	<creationDate>2023-10-13</creationDate>
+	<version>4.0.35</version>
+	<author>Arno Betz</author>
+	<copyright>(c) Arno Betz 2023</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>info@jdownloads.com</authorEmail>
+	<authorUrl>www.jdownloads.com</authorUrl>
+	<description>PLG_CONTENT_JDOWNLOADS_XML_DESC</description>
+	<files>
+	  <filename plugin="jdownloads">jdownloads.php</filename>
+	  <filename plugin="jdownloads">jdownloads/images/offline.gif</filename>
+	  <filename plugin="jdownloads">jdownloads/images/download.gif</filename>
+	  <filename plugin="jdownloads">jdownloads/images/nodownload.gif</filename>
+	  <filename plugin="jdownloads">jdownloads/images/link_extern.gif</filename>
+	</files>
+	<languages>
+	  <language tag="en-GB">language/en-GB/en-GB.plg_content_jdownloads.ini</language>
+	  <language tag="en-GB">language/en-GB/en-GB.plg_content_jdownloads.sys.ini</language>
+	  <language tag="de-DE">language/de-DE/de-DE.plg_content_jdownloads.ini</language>
+ 	  <language tag="de-DE">language/de-DE/de-DE.plg_content_jdownloads.sys.ini</language>
+	</languages>
+</extension>

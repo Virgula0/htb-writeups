@@ -1,0 +1,358 @@
+/**
+* @version 3.9 
+* @package jDownloads
+* @copyright (C) 2008 / 2020 www.jdownloads.com 
+* @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
+*
+* jdownloads_fe_rtl.css 	Version 3.9.0.6 Beta 6 - 14 May 2020 V3 */
+
+.jd_top_navi_item {
+	float: right;
+}
+.jd_top_navi_catbox {
+	float: left;
+}
+.jd_files_subheader,
+.jd_cat_subheader,
+.jd_cats_subheader {
+ text-align: right;
+}
+.jd_td_cat_files {
+ text-align: left;
+ padding-right:10px;
+ padding-left:5px;
+}
+.jd_search_results{
+ text-align: right;
+ padding: 0px 5px 5px 10px;
+}
+.jd_subcat_pagination_inner_wrapper {
+ text-align: right;
+}
+.jd_field_row_compact,
+.jd_field_row {
+ text-align: right;
+}
+.jd_summary_title {
+ text-align: right;
+}
+.jd_categories_title_v46, .jd_categories_title {
+	float: right;
+}
+.jd_categories_inner_wrapper {
+	float: left;
+}
+.jd_back_button {
+	float: right;
+}
+.jd_pagenavbar {
+ margin-right: 10px;
+ float: right;
+}
+.jd_page_nav {
+ text-align:left;
+ float:left;
+}
+.jd_files_subheader_title,
+.jd_cat_subheader_title {
+ float: right;
+}
+.jd_back_button {
+	float: right;
+}
+#displayimages li {
+ float: right;
+}
+dl.tabs {
+ float: right;
+}
+dl.tabs dt {
+ float: right;
+ margin-right: 3px;
+}
+jd-item-page li img {
+ float: right;
+}
+#thumbs #jdmain li {
+ float: right;
+ margin: 0 0 0 12px;
+}
+#jd .items div.media-left {
+ float: right;
+ margin-left: 10px;
+}
+#jd .items div.media-right {
+ float: left;
+ margin-left: 0px;
+}
+#jd .items div.image-right {
+ float: right;
+}
+#jd .items img.list-img {
+ float: left;
+ margin-right: 10px;
+ text-align: left;
+}
+/* Upload form stuff */
+.formelm60 {
+ float:right;
+ }
+.formelm60 label,
+.formelm_tags label,
+.formelm label {
+ float: right;
+ }
+.formelm40 {
+ margin-right: 5px;
+ float:right;
+ }
+ .formelm-area label {
+ float: right;
+ }
+ /* extra tooltip css for create/edit form */
+#jform_preview_file_upload-lbl,
+#jform_file_upload-lbl {
+ float: right;
+}
+.formelm30 small {
+ margin-right: 14em;
+}
+/*  audio */
+.jd_mp3_id3tag_wrapper {
+ float: right;
+ padding-right: 2px;
+}
+.jd_mp3_id3tag_name,
+.jd_mp3_id3tag_value{
+ float: left; 
+}
+.jd_audio_wrapper {
+ float: left;
+}
+/* general */
+.jd_clear_left {
+ clear: right;
+}
+.jd_clear_right {
+ clear: left;
+}
+/* for layout subheader navigation */
+.jd_cat_subheader ul {
+ float: left;
+}
+.jd_tags {
+ float:right;
+}
+.jd_words_left {
+ float: right;
+ text-align: right;
+ margin-left: 2%;
+ padding-right: 5px;
+}
+.jd_words_right {
+ float: left;
+ text-align: left;
+ margin-left: 0px;
+}
+/* category description */
+.jd_cat_desc {
+ float:right;
+}
+/* categories as in Categories Layout v3.2 */
+.jd_categories_title_v46 ,
+.jd_categories_title {
+ float: right;
+}
+.jd_categories_inner_wrapper {
+ float: left;
+}
+.jd_cats_sum_subcats,
+.jd_cats_sum_files {
+ float: left;
+ clear: left;
+}
+/* jd_sum_files_cat and jd_sum_subcats as used in older 3.2 versions */
+.jd_sum_files_cat,
+.jd_sum_subcats {
+ float: left;
+ text-align:left;
+}
+.jd_cat_title2 {
+ float: right;
+}
+/* vertical align category */
+.jd_sum_files_cat_scrolling {
+    float: left;
+    text-align: left;
+    left: 10px;
+}
+/* ordering -sort  */
+.jd_sort_order {
+ text-align: left; 
+ float: left;
+}
+.jd_subcat_count {
+ text-align: right;
+ float: right;
+}
+/* 4 column categories use 4 times 25% so "box-sizing: border-box;" added to include padding and any border within the width*/
+.jd_cats_4col {
+ float: left;
+ width: 25%;
+ padding-right:3px;
+}
+.jd_2col_inner_wrapper_right,
+.jd_2col_inner_wrapper {
+ padding-right:5px;
+}
+.jd_2col_inner_wrapper_right {
+ float:left;
+}
+.jd_cats_2col {
+ text-align:right;
+}
+.jd_cats_2col_left {
+ float: right;
+}
+/* download specific */
+.jd_url_download_right {
+ float: left;
+}
+.jd_download_url {
+ margin-right: 10px;
+}
+.jd_featured_pic,
+.jd_rating,
+.jd_rating_field {
+ float: left;
+}
+.jd_download_url_position,
+.jd_rating {
+ float:right;
+}
+.jd_rating_field .jwajaxvote-star-rating {
+ margin-right: 5px;
+ float: right;
+}
+.jd_title_left {
+ float: right;
+ padding-right: 5px;
+}
+.jd_title_right {
+ float: left;
+}
+/* checkbox in files */
+.jd_checkbox_wrapper {
+ float:left;
+}
+.jd_checkbox_file {
+ padding-right: 5px;
+}
+.jd_checkbox_title {
+ float:left;
+}
+/* for {file_pic} {file_title} {release} {pic_is_new} {pic_is_hot} {pic_is_updated} */
+.jd_title_block {
+ float: right;
+}
+.jd_content {
+ float: right;
+}
+.jd_fields_caption,
+.jd_field_row_wide,
+.jd_field_block {
+ padding-right: 5px;
+}
+.jd_fields_caption,
+.jd_field_row_wide,
+.jd_field_block,
+.jd_fields_caption_compact,
+.jd_fields_caption,
+.jd_field_row_compact,
+.jd_field_row  {
+ /* simulate border-collapse Also may need FIXING for RTL */
+ box-shadow: 
+ 1px 0 0 0 #cecece, 
+ 0 0px 0 0 #cecece, 
+ 1px 0px 0 0 #cecece, /* Just to fix the corner */
+ 1px 0 0 0 #cecece inset, 
+ 0 0px 0 0 #cecece inset;
+}
+.jd_field_value_compact,
+.jd_field_value {
+ float: left;
+}
+/* screenshot pics */
+.jd_screenshot {
+ float: left; 
+ padding: 3px;
+}
+.jd_image-left {
+ float: left;
+ padding: 0 15px 5px 0;
+}
+.jd_image_right {
+ float: right;
+ margin: 5px;
+}
+.jd_left {
+ float: right;
+}
+.jd_right {
+ float: left;
+}
+/*  for tags in jd39 */
+.jd_tags39 {
+	float: right;
+}
+/* CSS for Downloads subheader */
+.jd_subheader_wrap39 {
+ float: right;
+}
+.jd_subcat_count39 {
+ float: right;
+ margin-right: 0px;
+}
+.jd_subcat_count39 {
+ text-align: right;
+ float: right;
+ margin-right: 0px;
+}
+.jd_page_nav39 {
+    float: left;
+    margin-right: 5px;
+	padding: 0 3px;
+}
+.jd_page_nav39 ul {
+ margin-bottom:0px !important;
+ margin-right:9px; 
+}
+.jd_sort_order39 {
+    float: left;
+}
+/* files subheader */
+.jd_files_subheader_title39,
+.jd_cat_subheader_title39 {
+ float: left;
+ font-weight:bold;
+}
+/* for tags in Downloads with lang flags */
+ul.tags {
+	margin-left: 10px;
+}
+/* jD Table for summary view */
+.divTable.jd_div_table .divTableHeading .divTableHead:first-child {
+  border-right: none;
+}
+.form-horizontal .control-label{
+    text-align:right !important;
+}
+/* frontend edit-for front end edit sybols and picfor RTL */
+.button_rename,
+.jd_symbol_pic {
+  margin-right: 390px;
+}
+.jd_edit_button_delete {
+	margin-top:-110px;
+  margin-right: 425px;
+}

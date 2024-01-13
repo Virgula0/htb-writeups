@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		$Id: survey.xml - view customer survey form
+	-->
+<form>
+
+    <fieldset addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field">
+
+		<field name="id" 
+            type="hidden"
+            class="readonly" />
+
+		<field name="title" 
+            type="hidden" 
+            readonly="true" 
+            class="readonly" />
+
+        <field name="url_download" 
+            type="hidden" 
+            readonly="true" 
+            class="readonly" />
+
+        <field name="catid" 
+            type="hidden"
+            class="readonly" />
+
+        <field name="cat_title" 
+            type="hidden" 
+            readonly="true" 
+            class="readonly" />
+
+        <field name="name"
+            type="text"
+            class="inputbox" 
+            size="60"            
+            filter="string"
+            label="COM_JDOWNLOADS_SURVEY_NAME_LABEL"
+            description=""
+            required="false" />  
+
+        <field name="company"
+            type="text"
+            class="inputbox" 
+            size="60"            
+            filter="string"
+            label="COM_JDOWNLOADS_SURVEY_COMPANY_LABEL"
+            description=""
+            required="false" />
+
+        <field name="country"
+            type="text"
+            class="inputbox" 
+            size="60"            
+            filter="string"
+            label="COM_JDOWNLOADS_SURVEY_COUNTRY_LABEL"
+            description=""
+            required="false" />
+			
+        <field name="address"
+            type="textarea"
+            class="inputbox" 
+            rows="2"
+			cols="60"
+            filter="string"
+            label="COM_JDOWNLOADS_SURVEY_ADDRESS_LABEL"
+            description=""
+            required="false" />
+            
+        <field name="email"
+            type="email"
+            class="inputbox" 
+            size="60"            
+            validate="email"
+            label="COM_JDOWNLOADS_SURVEY_EMAIL_LABEL"
+            description="" 
+            required="false" />
+			
+        <field name="gdpr_agreement"
+            type="checkbox"
+            class="form-check-input"
+            value="1"
+			checked="0"
+            label="COM_JDOWNLOADS_SURVEY_GDPR_LABEL"
+            description="COM_JDOWNLOADS_SURVEY_GDPR_HINT" 
+            required="true" />			
+    </fieldset>
+	
+	<fieldset name="captcha">
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_JDOWNLOADS_CAPTCHA_LABEL"
+			validate="captcha"
+		/>
+	</fieldset>
+	
+</form>

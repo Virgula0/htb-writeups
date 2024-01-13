@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+	<name>com_jDownloads</name>
+	<creationDate>2023-10-24</creationDate>
+	<author>Arno Betz</author>
+	<authorEmail>info@jdownloads.com</authorEmail>
+	<authorUrl>http://www.jdownloads.com</authorUrl>
+	<copyright>(C) 2007-2023 www.jdownloads.com</copyright>
+	<license>GNU/GPL - http://www.gnu.org/copyleft/gpl.html</license>
+	<version>4.0.36 Stable</version>
+	<targetjoomla>4.0</targetjoomla>
+	<requiredForUpgrade>3.9.8.6</requiredForUpgrade>
+	<minimum_databases>mysql=5.7 mariadb=10.2 postgresql=9.6</minimum_databases>
+    <description></description>
+	<namespace path="src">JDownloads\Component\JDownloads</namespace>
+
+	<!-- Runs on install/uninstall/update -->
+	<scriptfile>script.php</scriptfile>
+	
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<update> <!-- Runs on update -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>	
+	
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<filename>alphauserpoints_rule.xml</filename>
+		<filename>altauserpoints_rule.xml</filename>
+		<filename>metadata.xml</filename>
+		<folder>forms</folder>
+		<folder>helpers</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_jdownloads.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.com_jdownloads.ini</language>
+	</languages>
+	<media folder="media/com_jdownloads" destination="com_jdownloads">
+		<filename>joomla.asset.json</filename>
+		<folder>js</folder>
+		<folder>css</folder>
+		<!--<folder>assets</folder>-->
+	</media>
+	
+	<!-- Administration Menu Section -->
+	<administration>
+		<menu img="" link="option=com_jdownloads">COM_JDOWNLOADS
+			<params>
+			<!--	<dashboard>Downloads</dashboard> -->
+			</params>
+		</menu>
+		<submenu>
+		  <menu img="" link="option=com_jdownloads">COM_JDOWNLOADS_CPANEL</menu>
+		  <menu img="" link="option=com_jdownloads&amp;view=categories">COM_JDOWNLOADS_CATEGORIES</menu>
+		  <menu img="" link="option=com_jdownloads&amp;view=downloads">COM_JDOWNLOADS_DOWNLOADS</menu>
+		  <menu img="" link="option=com_jdownloads&amp;view=files">COM_JDOWNLOADS_FILES</menu>
+		  <menu img="" link="option=com_jdownloads&amp;view=licenses">COM_JDOWNLOADS_LICENSES</menu>
+		  <menu img="" link="option=com_jdownloads&amp;view=layouts">COM_JDOWNLOADS_LAYOUTS</menu>
+		  <menu img="" link="option=com_jdownloads&amp;view=logs">COM_JDOWNLOADS_LOGS</menu>
+		  <menu img="" link="option=com_jdownloads&amp;view=associations">COM_JDOWNLOADS_MULTILINGUAL_ASSOCIATIONS</menu>
+		  <menu img="" link="option=com_jdownloads&amp;view=groups">COM_JDOWNLOADS_USER_GROUPS</menu>
+		  <menu img="" link="option=com_fields&amp;context=com_jdownloads.download">COM_JDOWNLOADS_CUSTOM_FIELDS</menu>
+		  <menu img="" link="option=com_fields&amp;view=groups&amp;context=com_jdownloads.download">COM_JDOWNLOADS_CUSTOM_FIELD_GROUPS</menu>	  
+		  <menu img="" link="option=com_jdownloads&amp;view=tools">COM_JDOWNLOADS_TOOLS</menu>
+		  <menu img="" link="option=com_jdownloads&amp;view=info">COM_JDOWNLOADS_TERMS_OF_USE</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>default_params.txt</filename>
+			<filename>htaccess.txt</filename>
+			<folder>forms</folder>
+			<folder>helpers</folder>
+			<folder>services</folder>
+			<folder>sql</folder>
+			<folder>src</folder>
+			<folder>tmpl</folder>
+			<folder>assets</folder>
+			<folder>layouts</folder>
+			<folder>help</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_jdownloads.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_jdownloads.sys.ini</language>
+            <language tag="de-DE">language/de-DE/de-DE.com_jdownloads.ini</language>
+            <language tag="de-DE">language/de-DE/de-DE.com_jdownloads.sys.ini</language>
+		</languages>
+	</administration>
+	<updateservers>
+		<!-- Note: No spaces or linebreaks allowed between the server tags -->
+		<server type="extension" priority="1" name="jDownloads Update Site">http://www.jdownloads.com/updates/4.0/final/jdownloads-update.xml</server>
+	</updateservers>
+	<!-- Possible download key -->
+	<!-- <dlid prefix="dlid=" suffix="" /> -->
+</extension>

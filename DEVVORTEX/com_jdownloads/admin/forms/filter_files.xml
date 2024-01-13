@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_JDOWNLOADS_FILTER_SEARCH_USERS_LABEL"
+			description="COM_JDOWNLOADS_FILTER_SEARCH_FILES_DESC"
+			hint="COM_JDOWNLOADS_SEARCH"
+		/>
+	</fields>
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			default="25"
+			label="COM_JDOWNLOADS_LIST_LIMIT"
+			description="COM_JDOWNLOADS_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

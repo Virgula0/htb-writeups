@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--	$Id: group.xml - select items etc for front end Group settings, create/edit Downloads and Limits 	-->
+<form>
+	<fieldset>
+		<field type="spacer" name="myspacer" hr="true" />
+        
+        <field name="id" type="hidden"
+			required="true"
+			readonly="true"
+		/>
+
+        <field name="group_id" type="hidden"
+            required="true"
+            readonly="true"
+        />        
+        
+		<field name="title" type="text"
+			class="readonly" readonly="true"
+			description=""
+			label="COM_JDOWNLOADS_USERGROUP_EDIT_TITLE_LABEL"
+			size="40"
+		/>
+        
+        <field name="importance" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_IMPORTANCE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_IMPORTANCE"
+            filter="integer" size="10"
+        />        
+
+        <field name="download_limit_daily" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_DAILY_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_DAILY"
+            filter="integer" size="10"
+        />
+
+        <field name="download_limit_daily_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />
+                
+        <field name="download_limit_weekly" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_WEEKLY_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_WEEKLY"
+            filter="integer" size="10"
+        />
+        
+        <field name="download_limit_weekly_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />        
+        
+        <field name="download_limit_monthly" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_MONTHLY_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_MONTHLY"
+            filter="integer" size="10"
+        />
+        
+        <field name="download_limit_monthly_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />                 
+
+        <field name="download_volume_limit_daily" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_VOLUME_LIMIT_DAILY_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_VOLUME_LIMIT_DAILY"
+            filter="integer" size="10"
+        />
+        
+        <field name="download_volume_limit_daily_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />         
+
+        <field name="download_volume_limit_weekly" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_VOLUME_LIMIT_WEEKLY_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_VOLUME_LIMIT_WEEKLY"
+            filter="integer" size="10"
+        />
+        
+        <field name="download_volume_limit_weekly_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />           
+
+        <field name="download_volume_limit_monthly" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_VOLUME_LIMIT_MONTHLY_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_VOLUME_LIMIT_MONTHLY"
+            filter="integer" size="10"
+        />
+        
+        <field name="download_volume_limit_monthly_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />                                   
+
+        <field name="how_many_times" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_HOW_MANY_TIMES_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_HOW_MANY_TIMES"
+            filter="integer" size="10"
+        />
+        
+        <field name="how_many_times_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />
+        
+        <field name="download_limit_after_this_time" type="text" default="60" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_AFTER_THIS_TIME_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_AFTER_THIS_TIME"
+            filter="integer" size="4"
+        />                  
+
+        <field name="transfer_speed_limit_kb" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_TRANSFER_SPEED_LIMIT_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_TRANSFER_SPEED_LIMIT"
+            filter="integer" size="10"
+        />                        
+        
+        <field name="upload_limit_daily" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_LIMIT_DAILY_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_LIMIT_DAILY"
+            filter="integer" size="10"
+        />
+        
+        <field name="upload_limit_daily_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />           
+        
+        <field name="may_edit_own_downloads" type="radio" layout="joomla.form.field.radio.switcher" 
+            description="COM_JDOWNLOADS_USERGROUPS_MAY_EDIT_OWN_FILES_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_MAY_EDIT_OWN_FILES"
+            size="1"
+            default="0">
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field name="may_edit_all_downloads" type="radio" layout="joomla.form.field.radio.switcher"  
+            description="COM_JDOWNLOADS_USERGROUPS_MAY_EDIT_ALL_FILES_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_MAY_EDIT_ALL_FILES"
+            default="0">
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+        </field>        
+
+    
+        <field name="view_captcha" type="radio" layout="joomla.form.field.radio.switcher"  
+            description="COM_JDOWNLOADS_USERGROUPS_VIEW_CAPTCHA_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_VIEW_CAPTCHA"
+            default="0">
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+        </field>  
+        
+        <field name="view_report_form" type="radio" layout="joomla.form.field.radio.switcher"  
+            description="COM_JDOWNLOADS_USERGROUPS_VIEW_REPORT_FORM_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_VIEW_REPORT_FORM"
+            default="0">
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field name="view_inquiry_form" type="radio" layout="joomla.form.field.radio.switcher" 
+            description="COM_JDOWNLOADS_USERGROUPS_VIEW_FORM_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_VIEW_FORM"
+            default="0">
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field name="must_form_fill_out" type="radio" layout="joomla.form.field.radio.switcher"  
+            description="COM_JDOWNLOADS_USERGROUPS_MUST_FORM_FILL_OUT_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_MUST_FORM_FILL_OUT"
+            default="0"
+            showon="view_inquiry_form:1">
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+        </field>  
+
+        <field name="form_fieldset" type="list" class="inputbox" multiple="true" 
+            description="COM_JDOWNLOADS_USERGROUPS_FORM_FIELDSET_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_FORM_FIELDSET"
+			validate="options"
+            showon="view_inquiry_form:1">
+            <option
+                value=""></option>
+            <option
+                value="1">COM_JDOWNLOADS_USERGROUPS_FORM_FIELDSET_NAME</option>
+			<option
+                value="2">COM_JDOWNLOADS_USERGROUPS_FORM_FIELDSET_COMPANY</option>
+			<option
+                value="3">COM_JDOWNLOADS_USERGROUPS_FORM_FIELDSET_COUNTRY</option>
+			<option
+                value="4">COM_JDOWNLOADS_USERGROUPS_FORM_FIELDSET_ADDRESS</option>
+			<option
+                value="5">COM_JDOWNLOADS_USERGROUPS_FORM_FIELDSET_EMAIL</option>
+        </field>
+		
+        <field name="inquiry_hint" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_INQUIRY_HINT_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_INQUIRY_HINT"
+            rows="4" cols="40"
+            filter="safehtml"
+			showon="view_inquiry_form:1"
+        />
+		
+		<field name="view_gdpr_dsgvo_option" type="radio" layout="joomla.form.field.radio.switcher"  
+            description="COM_JDOWNLOADS_USERGROUPS_GDPR_DSGVO_OPTION_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GDPR_DSGVO_OPTION"
+            default="0"
+			showon="view_inquiry_form:1">
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+        </field>		
+        
+        <field name="countdown_timer_duration" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_VIEW_COUNTDOWN_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_VIEW_COUNTDOWN"
+            filter="integer" size="10"
+        /> 
+
+        <field name="countdown_timer_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_VIEW_COUNTDOWN_MSG_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_VIEW_COUNTDOWN_MSG"
+            rows="4" cols="40"
+            filter="safehtml"
+        />
+        
+        <field name="view_user_his_limits" type="radio" layout="joomla.form.field.radio.switcher"  
+            description="COM_JDOWNLOADS_USERGROUPS_VIEW_USER_HIS_LIMITS_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_VIEW_USER_HIS_LIMITS"
+            default="0">
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+        </field>        
+        
+        <field name="view_user_his_limits_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_VIEW_USER_HIS_LIMITS_MSG_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_VIEW_USER_HIS_LIMITS_MSG_LABEL"
+            rows="8" cols="40"
+            filter="safehtml"
+        />
+        
+        <field name="notes"
+                type="textarea" 
+                rows="4"
+                cols="40" 
+                class="inputbox"
+                filter="safehtml"
+                label="COM_JDOWNLOADS_INTERNAL_NOTE_LABEL" 
+                description="COM_JDOWNLOADS_INTERNAL_NOTE_DESC"
+         />
+         
+<!-- Fields for upload/creation form --> 
+			<!--GC1 upload icon -->        
+         <field name="uploads_view_upload_icon"
+                type="radio"
+                label="COM_JDOWNLOADS_USERGROUPS_VIEW_UPLOAD_ICON"
+                description="COM_JDOWNLOADS_USERGROUPS_VIEW_UPLOAD_ICON_DESC"
+                layout="joomla.form.field.radio.switcher"
+                default="1">
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+        </field>        
+			<!--GC2 select different category -->                
+         <field name="uploads_can_change_category"
+                type="radio"
+                label="COM_JDOWNLOADS_USERGROUPS_CAN_CHANGE_FILES_CAT"
+                description="COM_JDOWNLOADS_USERGROUPS_CAN_CHANGE_FILES_CAT_DESC"
+                layout="joomla.form.field.radio.switcher"
+                default="1">
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+        </field>        
+			<!--GC3 allow tag creation -->         
+         <field name="uploads_allow_custom_tags"
+                type="radio"
+                label="COM_JDOWNLOADS_USERGROUPS_ALLOW_CUSTOM_TAGS"
+                description="COM_JDOWNLOADS_USERGROUPS_ALLOW_CUSTOM_TAGS_DESC"
+                layout="joomla.form.field.radio.switcher"
+                default="1">
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+        </field> 
+			<!--GC4 auto publish -->         
+         <field name="uploads_auto_publish"
+                type="radio" 
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_AUTO_PUBLISH" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_AUTO_PUBLISH_DESC"
+                layout="joomla.form.field.radio.switcher"
+                default="0">
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+        </field> 
+					<!--GC5 use editor -->        
+         <field name="uploads_use_editor"
+                type="radio" 
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_USE_EDITOR" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_USE_EDITOR_DESC"
+                layout="joomla.form.field.radio.switcher"
+                default="1">
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+        </field>        
+			<!--GC6 use tabs -->
+         <field name="uploads_use_tabs"
+                type="radio" 
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_USE_TABS" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_USE_TABS_DESC"
+                layout="joomla.form.field.radio.switcher"
+                default="1">
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+			<!--GC7 set default access -->        
+         <field name="uploads_default_access_level"
+                type="accesslevel"
+                label="COM_JDOWNLOADS_USERGROUPS_DEFAULT_ACCESS_LEVEL"
+                description="COM_JDOWNLOADS_USERGROUPS_DEFAULT_ACCESS_LEVEL_DESC"
+				class="form-control valid"
+				default="0"
+				filter="UINT"
+				validate="options">
+                <option value="0">COM_JDOWNLOADS_SELECT_ACCESS</option>  
+         </field>  
+                
+			<!--GC8 allowed file type -->
+         <field name="uploads_allowed_types"
+                type="textarea" 
+                rows="2"
+                cols="40"
+                default="zip,rar,pdf,txt"
+                class="inputbox"  
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_ALLOWED_TYPES" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_ALLOWED_TYPES_DESC"
+         />  
+			<!--GC9 allowed preview types -->
+         <field name="uploads_allowed_preview_types"
+                type="textarea" 
+                rows="2"
+                cols="40"   
+                default="mp3,mp4"
+                class="inputbox"  
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_ALLOWED_PREV_TYPES" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_ALLOWED_PREV_TYPES_DESC"
+         />          
+			<!--GC10 max file size -->         
+         <field name="uploads_maxfilesize_kb"
+                type="text" 
+                default="2048" 
+                class="inputbox" 
+                filter="integer" size="15"                
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_MAX_FILESIZE" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_MAX_FILESIZE_DESC"
+         />
+			<!--GC11 nos images -->
+         <field name="uploads_max_amount_images"
+                type="text" 
+                default="3" 
+                class="inputbox" 
+                filter="integer" size="2"   
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_MAX_AMOUNT_IMAGES" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_MAX_AMOUNT_IMAGES_DESC"
+         />		 
+			<!--GC12 text above form -->
+         <field name="uploads_form_text"
+                type="textarea" 
+                rows="4"
+                cols="40" 
+                class="inputbox"
+                filter="safehtml"
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_FORM_TEXT" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_FORM_TEXT_DESC"
+         />           
+
+<!-- Activation / de-activation of form fields  -->
+			<!--M1 title tick box -->          
+        <field name="form_title"
+                type="checkbox" 
+                class="checkbox"
+                label="COM_JDOWNLOADS_TITLE" 
+                description=""
+                value="1"
+                default="1"
+                required="true" 
+        />
+			<!--M2 alias tick box -->          
+        <field name="form_alias"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_ALIAS" 
+                description="COM_JDOWNLOADS_ALIAS_DESC3"
+                value="1"
+                default="1" 
+        />
+			<!--M2A alias required tick box -->          
+        <field name="form_alias_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+        />
+			<!--M3 version tick box -->          
+        <field name="form_version"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_RELEASE" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_RELEASE_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--M3A version required tick box -->         
+         <field name="form_version_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />
+			<!--M4 Download language tick box --> 
+         <field name="form_language"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_LANGUAGE" 
+                description="COM_JDOWNLOADS_LANGUAGE_DESC3"
+                value="1"
+                default="0"
+         />         
+        <field name="form_update_active"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_EDIT_FILES_SET_UPDATE_TITLE" 
+                description="COM_JDOWNLOADS_BACKEND_EDIT_FILES_SET_UPDATE_TITLE_DESC3"
+                value="1"
+                default="0"
+        />
+
+<!-- Publishing tab -->
+			<!--P1 category tick box -->         
+         <field name="form_category"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESLIST_CAT" 
+                description="COM_JDOWNLOADS_BACKEND_FILESLIST_CAT_DESC3"
+                required="true" 
+                value="1"
+                default="1"
+         />
+			<!--P2 access tick box --> 
+         <field name="form_access"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_ACCESS" 
+                description="COM_JDOWNLOADS_ACCESS_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--P3 single user access tick box --> 
+         <field name="form_user_access"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_USER_ACCESS" 
+                description="COM_JDOWNLOADS_EDIT_FILE_USER_ACCESS_DESC3"
+                value="1"
+                default="0"
+         /> 
+			<!--P4 tags tick box -->         
+         <field name="form_tags"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_TAGS_LABEL" 
+                description="COM_JDOWNLOADS_TAGS_LABEL_DESC3"
+                value="1"
+                default="0"
+         />         		 
+			<!--P5 published tick box -->         
+         <field name="form_published"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_PUBLISHED" 
+                description="COM_JDOWNLOADS_PUBLISHED_DESC3"
+                value="1"
+                default="0"
+         /> 
+			<!--P6 featured tick box -->         
+         <field name="form_featured"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_FEATURED" 
+                description="COM_JDOWNLOADS_FEATURED_DESC3"
+                value="1"
+                default="0"
+         />
+		 			<!--P7 created by tick box --> 
+         <field name="form_created_id"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CREATED_BY" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_FORM_CREATED_ID_DESC"
+                value="1"
+                default="0"
+         />          
+			<!--P7A created by required tick box -->         
+         <field name="form_created_id_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         /> 
+			<!--P8 created date tick box -->
+         <field name="form_creation_date"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CREATED_DATE" 
+                description="COM_JDOWNLOADS_CREATED_DATE_DESC3"
+                value="1"
+                default="0"
+         /> 
+			<!--P8A created date required tick box -->         
+         <field name="form_creation_date_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />          
+			<!--P9 modified date tick box -->         
+         <field name="form_modified_date"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_MODIFIED_DATE" 
+                description="COM_JDOWNLOADS_MODIFIED_DATE_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--P11 timeframe tick box -->
+         <field name="form_timeframe"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_EDIT_FILE_START_END_DATE_ACTIVATE_TITLE" 
+                description="COM_JDOWNLOADS_EDIT_FILE_TIMEFRAME_ACTIVATE_DESC"
+                value="1"
+                default="0"
+         />		 
+			<!--P12 Ordering tick box -->            
+         <field name="form_ordering"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_ORDERING" 
+                description="COM_JDOWNLOADS_ORDERING_DESC3"
+                value="1"
+                default="0"
+         />        
+<!--Description tab --> 		 
+			<!--D1 short desc tick box -->          
+         <field name="form_short_desc"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_DESCRIPTION_SHORT" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_DESCRIPTION_SHORT_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--D1A short desc required tick box -->          
+         <field name="form_short_desc_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />                   
+			<!--D2 long desc tick box --> 
+         <field name="form_long_desc"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_DESCRIPTION_LONG" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_DESCRIPTION_LONG_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--D2A long desc required tick box -->          
+         <field name="form_long_desc_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />
+<!-- Files tab -->
+			<!--F1 select main file tick box -->
+         <field name="form_select_main_file"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_USERGROUPS_SELECT_MAIN_FILE" 
+                description="COM_JDOWNLOADS_USERGROUPS_SELECT_MAIN_FILE_DESC3"
+                value="1"
+                default="0"
+         /> 
+			<!--F1A select main file required tick box -->		 
+         <field name="form_select_main_file_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />
+		<!--F1B need tick box for file from other Download -->
+		 <field name="form_select_from_other"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_USERGROUPS_FILE_FROM_OTHER_DOWNLOAD" 
+                description="COM_JDOWNLOADS_USERGROUPS_FILE_FROM_OTHER_DOWNLOAD_DESC3"
+                value="1"
+                default="0"
+         />  
+			<!--F2 file size tick box -->          
+         <field name="form_file_size"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_SIZE" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_SIZE_DESC3"
+                value="1"
+                default="0"
+         />  
+			<!--F3 file date tick box -->          
+         <field name="form_file_date"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_EDIT_FILE_FILE_DATE_TITLE" 
+                description="COM_JDOWNLOADS_EDIT_FILE_FILE_DATE_TITLE_DESC3"
+                value="1"
+                default="0"
+         />  
+			<!--F3A file date required tick box -->
+         <field name="form_file_date_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />             
+			<!--F4 select preview tick box -->         
+         <field name="form_select_preview_file"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_PREVIEW_FILE" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_PREVIEW_FILE_DESC3"
+                value="1"
+                default="0"
+         />  
+			<!--F4A select preview required tick box -->
+         <field name="form_select_preview_file_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />             
+			<!--F5 External file tick box -->         
+         <field name="form_external_file"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILE_EDIT_EXT_DOWNLOAD_TITLE" 
+                description="COM_JDOWNLOADS_BACKEND_FILE_EDIT_EXT_DOWNLOAD_TITLE_DESC3"
+                value="1"
+                default="0"
+         />  
+			<!--F5 External file required tick box -->
+         <field name="form_external_file_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />             
+			<!--F6 mirror 1 tick box -->
+         <field name="form_mirror_1"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_MIRROR_URL_TITLE1" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_MIRROR_URL_TITLE1_DESC3"
+                value="1"
+                default="0"
+         />  
+			<!--F6A mirror 1 required tick box -->
+         <field name="form_mirror_1_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />             
+			<!--F7 mirror 2 tick box -->         
+         <field name="form_mirror_2"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_MIRROR_URL_TITLE2" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_MIRROR_URL_TITLE2_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--F7A mirror 2 required tick box -->            
+         <field name="form_mirror_2_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         /> 
+<!-- Images tab -->
+			<!--I1 images tick box -->         
+         <field name="form_images"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_THUMBNAIL_UPLOAD_TITLE" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_THUMBNAIL_UPLOAD_TITLE_DESC3"
+                value="1"
+                default="0"
+         />                                                                          
+			<!--I1A images required tick box -->
+         <field name="form_images_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />   		 
+<!-- Additional info tab -->
+			<!--A1 symbol tick box -->         
+         <field name="form_file_pic"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESLIST_PIC" 
+                description="COM_JDOWNLOADS_BACKEND_FILESLIST_PIC_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--A1A symbol required tick box -->          
+         <field name="form_file_pic_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />                     
+			<!--A2 password tick box -->        
+         <field name="form_password"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_EDIT_CAT_PASSWORD_LABEL" 
+                description="COM_JDOWNLOADS_EDIT_CAT_PASSWORD_LABEL_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--A2 password required tick box -->         
+         <field name="form_password_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />          
+			<!--A3 price tick box -->         
+         <field name="form_price"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_PRICE" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_PRICE_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--A3 price required tick box -->
+         <field name="form_price_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />  		 
+			<!--A4 file language tick box -->         
+         <field name="form_file_language"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_LANGUAGE" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_LANGUAGE_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--A4A file language required tick box -->         
+         <field name="form_file_language_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />            
+			<!--A5 operating system tick box -->         
+         <field name="form_file_system"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_SYSTEM" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_SYSTEM_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--A5 operating system required tick box -->         
+         <field name="form_file_system_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />            
+			<!--A6 license tick box -->         
+         <field name="form_license"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_LICENSE" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_LICENSE_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--A6 license required tick box -->         
+         <field name="form_license_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />                                                                                            
+			<!--A7  confirm license tick box -->         
+         <field name="form_confirm_license"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_CONFIRM_LICENSE" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_CONFIRM_LICENSE_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--A8 website tick box -->         
+         <field name="form_website"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_URL_HOME" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_URL_HOME_DESC3"
+                value="1"
+                default="0"
+         />                                                                                                                                        
+			<!--A8 website required tick box --> 
+         <field name="form_website_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />          
+			<!--A9 author tick box -->          
+         <field name="form_author_name"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_AUTHOR" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_AUTHOR_DESC3"
+                value="1"
+                default="0"
+         />    
+			<!--A9A author required tick box -->
+         <field name="form_author_name_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         /> 
+			<!--A10 author email tick box -->         
+         <field name="form_author_mail"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_AUTHOR_URL" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_AUTHOR_URL_DESC3"
+                value="1"
+                default="0"
+         /> 
+			<!--A10A author email required tick box --> 
+         <field name="form_author_mail_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />                        
+			<!--A11 nos times viewed tick box -->          
+         <field name="form_views"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_VIEWS" 
+                description="COM_JDOWNLOADS_VIEWS_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--A12 nos times downloaded tick box -->         
+         <field name="form_downloaded"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESLIST_HITS" 
+                description="COM_JDOWNLOADS_BACKEND_FILESLIST_HITS_DESC3"
+                value="1"
+                default="0"
+         />
+			<!--A13 change log tick box -->         
+         <field name="form_changelog"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_CHANGELOG" 
+                description="COM_JDOWNLOADS_BACKEND_FILESEDIT_CHANGELOG_DESC3"
+                value="1"
+                default="0"
+         /> 
+			<!--A13A change log required tick box -->         
+         <field name="form_changelog_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         /> 
+
+<!-- Metadata tab -->
+			<!--Me1 Metadata Desc tick box -->         
+         <field name="form_meta_desc"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_META_DESCRIPTION_LABEL" 
+                description="COM_JDOWNLOADS_META_DESCRIPTION_LABEL_DESC3"
+                value="1"
+                default="0"
+         />  
+			<!--Me2 Metadata keywords tick box -->         
+         <field name="form_meta_key"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_META_KEYWORDS_LABEL" 
+                description="COM_JDOWNLOADS_META_KEYWORDS_LABEL_DESC3"
+                value="1"
+                default="0"
+         />  
+			<!--Me3 Changelog tick box -->        
+         <field name="form_robots"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_ROBOTS_LABEL" 
+                description="COM_JDOWNLOADS_ROBOTS_LABEL_DESC3"
+                value="1"
+                default="0"
+         />
+         
+         <field type="spacer" name="spacer1" hr="true" />                                                                                     
+      
+	</fieldset>
+                                                                          
+</form>

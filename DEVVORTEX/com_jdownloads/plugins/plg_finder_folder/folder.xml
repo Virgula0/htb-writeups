@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="finder" method="upgrade">
+	<name>plg_finder_folder</name>
+	<author>Arno Betz</author>
+	<creationDate>2022-12-25</creationDate>
+	<copyright>Copyright (C) 2007 - 2022 by Arno Betz</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@jdownloads.com</authorEmail>
+	<authorUrl>www.jdownloads.com</authorUrl>
+	<version>4.0</version>
+	<description>PLG_FINDER_FOLDER_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="folder">folder.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_finder_folder.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_finder_folder.sys.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.plg_finder_folder.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.plg_finder_folder.sys.ini</language>
+	</languages>
+</extension>

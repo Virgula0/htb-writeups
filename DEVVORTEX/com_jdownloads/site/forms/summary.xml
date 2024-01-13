@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		$Id: survey.xml - view customer survey form
+	-->
+<form>
+
+	<fieldset name="captcha">
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_JDOWNLOADS_CAPTCHA_LABEL"
+			validate="captcha"
+		/>
+	</fieldset>
+	
+</form>

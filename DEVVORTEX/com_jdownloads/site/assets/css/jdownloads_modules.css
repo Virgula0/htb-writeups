@@ -1,0 +1,121 @@
+/* CSS for jDownloads Featured, Last Updated, Latest, Most Recent, Rated, Related, Tree and Top Modules
+Version 4.0 updated 3 Oct 2022
+*/
+code {
+    background-color: #fff !important;
+	border: none !important;
+	color: #000 !important;
+	padding: 0 !important;
+	white-space: nowrap; 
+}
+/* Text field for top text*/
+.jd_module_before {
+    display:block;
+	font-size: small;
+	padding: 0 0 10px 0;
+}
+
+/* Text field for the bottom text*/
+.jd_module_after {
+    display:block;
+	font-size: small;
+	padding: 10px 0 0 0;
+}
+
+.jd_module_date_newline {
+	font-size: small;
+	}
+.jd_module_date_sameline {
+	font-size: small;
+	}
+	
+.jd_module_hits_newline {
+	font-size: small;
+	}
+.jd_module_hits_sameline {
+	font-size: small;
+	}
+.jd_module_thumbnail,	
+.jd_module_pic {
+    border:0;
+    padding:2px 0;
+	vertical-align:top;
+}
+.jd_module_link {
+	
+}
+.jd_module_numbering {
+	padding-right: 0;
+}
+.jd_module_title {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* mod_jdownloads_last_downloaded_files */
+
+.td_jd_ldf_before {
+    display: block;
+	font-size: small;
+	padding: 0 0 10px 0;
+}
+
+.td_jd_ldf_after {
+	display: block;
+	font-size: small;
+	padding: 10px 0 0 0;
+}
+
+.td_jd_ldf_date_row {
+	font-size: 8pt;
+}
+/*  tree css */
+   .j7dctree li {
+	    list-style-type:none;	
+        background:none;
+	    font-family: arial;
+	    font-size:12px;
+	}
+
+    .j7dctree img {
+	    padding-top:-1px;
+        vertical-align: middle;
+	}
+
+    .j7dctree div ul li a {
+	    text-decoration:none;
+    } 
+
+    .j7dctree {
+	    margin-left:0px;
+	    padding-left:0px;
+	}
+
+    .j7dctree ul {
+	    margin-left:12px;
+	    padding-left:0px;
+	    display:none;
+	}
+ 
+    .j7dctree_link {
+	    line-height:13px;
+	    padding-left:1px;
+	}
+
+    .j7dctree_node{
+	    text-decoration:none;
+	}
+
+    .jdmroothov {
+	    text-decoration:none;
+    } 
+
+    .jdmcredits {
+	    font-size:8px;
+	    padding-left:30px;
+    }
+    .jdmnumber {
+        /*font-size:9px;*/
+        padding-left:2px;
+        padding-right:2px;
+    }

@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Jan 08 14:39:00 CET 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-018c-e94c-4c28-00000dc9fea8 
+on database directory /home/angelo/HTB/BIZNESS/assets/derby/ofbiz with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@42110406 
+Loaded from file:/home/angelo/HTB/BIZNESS/db-derby-10.16.1.1-bin/lib/derby.jar
+java.vendor=N/A
+java.runtime.version=17.0.9+8
+user.dir=/home/angelo/HTB/BIZNESS/db-derby-10.16.1.1-bin/bin
+os.name=Linux
+os.arch=amd64
+os.version=6.6.10-arch1-1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

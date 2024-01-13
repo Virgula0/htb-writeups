@@ -1,0 +1,39 @@
+----------------------------------------------------------------
+----------------------------------------------------------------
+Sun Jan 07 00:58:06 EST 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-018c-e27f-f61b-ffffa94ec81a 
+on database directory /opt/ofbiz/runtime/data/derby/ofbiz with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 
+Loaded from file:/home/ofbiz/.gradle/caches/modules-2/files-2.1/org.apache.derby/derby/10.14.2.0/7efad40ef52fbb1f08142f07a83b42d29e47d8ce/derby-10.14.2.0.jar
+java.vendor=Debian
+java.runtime.version=11.0.21+9-post-Debian-1deb11u1
+user.dir=/opt/ofbiz
+os.name=Linux
+os.arch=amd64
+os.version=5.10.0-26-amd64
+Sun Jan 07 00:58:06 EST 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 601a400f-018c-e27f-f61b-ffffa94ec81a 
+on database directory /opt/ofbiz/runtime/data/derby/ofbizolap with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 
+Loaded from file:/home/ofbiz/.gradle/caches/modules-2/files-2.1/org.apache.derby/derby/10.14.2.0/7efad40ef52fbb1f08142f07a83b42d29e47d8ce/derby-10.14.2.0.jar
+java.vendor=Debian
+java.runtime.version=11.0.21+9-post-Debian-1deb11u1
+user.dir=/opt/ofbiz
+os.name=Linux
+os.arch=amd64
+os.version=5.10.0-26-amd64
+derby.system.home=runtime/data/derby
+derby.system.home=runtime/data/derby
+----------------------------------------------------------------
+Sun Jan 07 00:58:06 EST 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance f81e0010-018c-e27f-f61b-ffffa94ec81a 
+on database directory /opt/ofbiz/runtime/data/derby/ofbiztenant with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 
+Loaded from file:/home/ofbiz/.gradle/caches/modules-2/files-2.1/org.apache.derby/derby/10.14.2.0/7efad40ef52fbb1f08142f07a83b42d29e47d8ce/derby-10.14.2.0.jar
+java.vendor=Debian
+java.runtime.version=11.0.21+9-post-Debian-1deb11u1
+user.dir=/opt/ofbiz
+os.name=Linux
+os.arch=amd64
+os.version=5.10.0-26-amd64
+derby.system.home=runtime/data/derby
+Database Class Loader started - derby.database.classpath=''
+Database Class Loader started - derby.database.classpath=''
+Database Class Loader started - derby.database.classpath=''

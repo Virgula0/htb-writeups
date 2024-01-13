@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		$Id: download.xml - edit download in backend
+	-->
+<form>
+
+    <fieldset addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field">
+	
+<!-- main -->
+
+		<field name="id" 
+            type="text" 
+            default="0" 
+            label="COM_JDOWNLOADS_ID"
+			readonly="true" 
+            class="readonly"
+			description="" />
+			<!-- M1 Title  -->
+
+		<field name="title" 
+            type="text" 
+			size="40" 
+            label="COM_JDOWNLOADS_TITLE"
+			description="" 
+            required="true" 
+			maxlength="255"
+			/>
+			<!-- M2 Alias  -->            
+            
+        <field name="alias" 
+            type="text" 
+            class="inputbox"
+            size="40"
+			hint="COM_JDOWNLOADS_ALIAS_PLACEHOLDER"			
+            label="COM_JDOWNLOADS_ALIAS"
+            description="COM_JDOWNLOADS_FIELD_ALIAS_DESC" />
+			<!-- M3 version  -->            
+            
+        <field name="release" 
+            type="text" 
+            class="inputbox"
+            size="40" 
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_RELEASE"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_RELEASE_DESC" />
+			
+<!-- publishing tab-->
+
+			<!-- P1 category  -->            
+        <field name="catid"
+            type="JDCategorySelect"
+            label="COM_JDOWNLOADS_BACKEND_FILESLIST_CAT"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_FILE_SELECT_CAT_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            required="true" />
+			
+			<!-- P2 access level  -->            
+        <field
+            name="access"
+            type="accesslevel"
+            label="COM_JDOWNLOADS_ACCESS"
+            description="COM_JDOWNLOADS_DOWNLOADS_ACCESS_DESC"
+            filter="UINT"
+			validate="options"
+			/>
+			
+			<!-- P3 single user access -->            
+        <field
+            name="user_access"
+            type="user"
+            label="COM_JDOWNLOADS_USER_ACCESS"
+            description="COM_JDOWNLOADS_USER_ACCESS_DESC"
+            class="inputbox"
+			/>
+			
+			<!-- P4 tags -->
+        <field
+            name="tags"
+            type="tag"
+            label="JTAG"
+            description=""
+            class="advancedSelect"
+            multiple="true"
+			/>
+			
+			<!-- P5 tags -->        
+        
+        <field name="featured" type="radio"
+            layout="joomla.form.field.radio.switcher"
+            label="COM_JDOWNLOADS_FIELD_FEATURED"
+            description="COM_JDOWNLOADS_FIELD_FEATURED_DESC"
+            default="0">
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>            
+            
+
+			<!--P10 update active -->
+        <field name="update_active" 
+            type="radio"
+            label="COM_JDOWNLOADS_BACKEND_EDIT_FILES_SET_UPDATE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_EDIT_FILES_SET_UPDATE_TEXT"
+            layout="joomla.form.field.radio.switcher"
+            size="1"
+            default="0">
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>            
+
+<!-- description tab -->
+
+			<!-- D1 short description  -->
+        <field name="description"
+            type="editor" 
+            buttons="true" 
+            hide="pagebreak,readmore"
+			class="inputbox"
+			filter="\Joomla\CMS\Component\ComponentHelper::filterText"
+            height="280" 
+			label="COM_JDOWNLOADS_BACKEND_FILESEDIT_DESCRIPTION_SHORT" 
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_DESCRIPTION_SHORT_DESC" />
+
+			<!-- D2 long description  -->            
+        <field name="description_long"
+            type="editor" 
+            buttons="true" 
+            hide="pagebreak,readmore"
+            class="inputbox"
+            filter="\Joomla\CMS\Component\ComponentHelper::filterText"
+            height="350" 
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_DESCRIPTION_LONG" 
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_DESCRIPTION_LONG_DESC" />
+			<!-- A13 change log  -->            
+            
+        <field name="changelog"
+            type="editor" 
+            buttons="true" 
+            hide="pagebreak,readmore"
+            class="inputbox"
+            filter="\Joomla\CMS\Component\ComponentHelper::filterText"
+            height="250" 
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_CHANGELOG" 
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_CHANGELOG_DESC" />                        
+			<!-- P5 published  -->            
+            
+        <field name="published"
+            type="list"
+            label="JSTATUS"
+            description="COM_JDOWNLOADS_FIELD_STATE_DESC"
+            class="form-select-color-state"
+            size="1"
+            default="1"
+			validate="options"
+			>
+            <option value="1">COM_JDOWNLOADS_PUBLISHED</option>
+            <option value="0">COM_JDOWNLOADS_UNPUBLISHED</option>
+        </field>
+			<!-- M4 Download language  -->
+
+        <field 
+            name="language"
+            type="contentlanguage"
+            label="COM_JDOWNLOADS_LANGUAGE"
+            description="COM_JDOWNLOADS_LANGUAGE_DESC2"
+            class="inputbox">
+            <option value="*">COM_JDOWNLOADS_ALL</option>
+        </field>
+		
+		<field 
+			name="rules" 
+			type="rules" 
+			label=""
+            translate_label="false"
+			filter="rules"
+            component="com_jdownloads"
+			section="download"
+			validate="rules" />
+        
+        <field name="buttonspacer"
+            description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
+            type="spacer" />        
+        
+        <field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+        <field name="asset_id" type="hidden" filter="unset" />
+            
+        <field
+            name="created_by"
+            type="user"
+            label="COM_JDOWNLOADS_CREATED_BY"
+            description="COM_JDOWNLOADS_CREATED_BY_DESC"
+            />
+
+        <field 
+            name="created" 
+            type="calendar" 
+            label="COM_JDOWNLOADS_CREATED_DATE"
+            description="COM_JDOWNLOADS_CREATED_DATE_DESC" 
+            translateformat="true"
+			showtime="true" 
+            filter="user_utc" 
+			/>            
+            
+        <field 
+            name="modified" 
+            type="calendar" 
+            label="COM_JDOWNLOADS_MODIFIED_DATE"
+            description="COM_JDOWNLOADS_MODIFIED_DATE_DESC" 
+            class="form-control" 
+            translateformat="true"
+			showtime="true" 
+            filter="user_utc" 
+            readonly="true" />             
+
+        <field
+            name="modified_by"
+            type="user"
+            label="COM_JDOWNLOADS_MODIFIED_BY"
+            filter="unset"
+			class="readonly"
+			readonly="true"
+			validate="UserId"
+            />            
+            
+        <field 
+            name="publish_up" 
+            type="calendar" 
+            label="COM_JDOWNLOADS_EDIT_FILE_START_DATE_TITLE"
+            description="COM_JDOWNLOADS_EDIT_FILE_START_DATE_TITLE_DESC" 
+            translateformat="true"
+			showtime="true" 
+            filter="user_utc" 
+			/>            
+            
+        <field 
+            name="publish_down" 
+            type="calendar" 
+            label="COM_JDOWNLOADS_EDIT_FILE_END_DATE_TITLE"
+            description="COM_JDOWNLOADS_EDIT_FILE_END_DATE_TITLE_DESC" 
+			translateformat="true"
+			showtime="true"
+            filter="user_utc" 
+			/>
+
+        <field
+            name="views"
+            type="text"                      
+            label="COM_JDOWNLOADS_VIEWS"
+            description="COM_JDOWNLOADS_VIEWS_DESC"            
+            class="inputbox"
+            filter="integer"
+            default="0"
+            size="10"
+            readonly="false" />
+            
+        <field
+            name="price"
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_PRICE"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_PRICE_DESC"
+            class="inputbox"
+            default=""
+            size="10" />              
+            
+        <field
+            name="downloads"
+            type="text"
+            class="inputbox" 
+            default="0"
+            size="10"            
+            filter="integer"
+            label="COM_JDOWNLOADS_BACKEND_FILESLIST_HITS"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_HITS_DESC" 
+            required="false" />
+                   
+        <field name="password"
+            type="text"
+            class="inputbox" 
+            size="40"
+            label="COM_JDOWNLOADS_EDIT_CAT_PASSWORD_LABEL"
+            required="false" 
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_PASSWORD_DESC"  />
+        
+        <field name="file_pic"
+            type="JDFileIcon" 
+            label="COM_JDOWNLOADS_CATSLIST_PIC" 
+            description="COM_JDOWNLOADS_PIC_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field" />
+                    
+        <field name="picnew" 
+            type="file" 
+            label="COM_JDOWNLOADS_PIC_NEW"
+            size="40"
+            description="COM_JDOWNLOADS_PIC_NEW_DESC" />        
+        
+        <field name="notes"
+                type="textarea" 
+                rows="3"
+                cols="40" 
+                class="inputbox"
+                filter=""
+                label="COM_JDOWNLOADS_INTERNAL_NOTE_LABEL" 
+                description="COM_JDOWNLOADS_INTERNAL_NOTE_DESC" />
+
+        <field name="license"
+            type="JDLicenseSelect"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_LICENSE"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_LICENSE_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            class="inputbox"
+            required="false" />
+            
+        <field name="file_language"
+            type="JDFileLanguageSelect"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_LANGUAGE"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_LANGUAGE_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            class="inputbox"
+            required="false" />
+       
+        <field name="system"
+            type="JDSystemSelect"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_SYSTEM"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_SYSTEM_DESK"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            class="inputbox"
+            required="false" />
+                   
+        <field name="license_agree" 
+            type="radio"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_CONFIRM_LICENSE"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_CONFIRM_LICENSE_DESC"
+            layout="joomla.form.field.radio.switcher"
+            size="1"
+            default="0">
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>                          
+  
+        <field
+            name="size"
+            type="text"
+            class="inputbox" 
+            default="0"
+            size="10"            
+            filter="unset"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_SIZE"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_SIZE_DESC" 
+            required="false" /> 
+            
+        <field 
+            name="file_date" 
+            type="calendar" 
+            label="COM_JDOWNLOADS_EDIT_FILE_FILE_DATE_TITLE"
+            description="COM_JDOWNLOADS_EDIT_FILE_FILE_DATE_DESC"
+            size="22"
+			format="%Y-%m-%d %H:%M:%S"
+			translateformat="true"
+			showtime="true" 
+            filter="user_utc" 
+			/>             
+     
+        <field
+            label="" 
+            name="spacer"
+            description=""
+            hr="true"
+            type="spacer" />
+            
+        <field
+            name="author"
+            type="text"
+            class="inputbox" 
+            size="60"            
+            filter="unset"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_AUTHOR"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_AUTHOR_DESC" 
+            required="false" />            
+
+        <field
+            name="url_author"
+            type="text"
+            class="inputbox" 
+            size="60"            
+            filter="unset"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_AUTHOR_URL"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_AUTHOR_URL_DESC" 
+            required="false" />            
+
+        <field
+            name="url_home"
+            type="text"
+            class="inputbox" 
+            size="60"            
+            filter="unset"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_URL_HOME"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_URL_HOME_DESC" 
+            required="false" />            
+<!-- files tab-->            
+            
+        <field 
+            name="file_upload" 
+            type="file" 
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_FILE" 
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_FILE_DESC" 
+            size="50" 
+            accept="" />
+
+        <field
+            name="url_download"
+            type="text"
+            class="inputbox" 
+            size="50"            
+            filter="unset"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_FILE_ADD_FROM_SERVER"
+            description=""
+            readonly="true" 
+            required="false" />
+            
+        <field name="update_file"
+            type="JDServerFileSelect"
+            label="COM_JDOWNLOADS_FILESEDIT_FILE_UPDATE_FILE_TITLE2"
+            description="COM_JDOWNLOADS_FILESEDIT_FILE_UPDATE_FILE_DESC2"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            class="inputbox"
+            required="false" />
+            
+        <field name="other_file_id" 
+            type="Modal_Download" 
+            label="COM_JDOWNLOADS_FILESEDIT_FILE_FROM_OTHER_DOWNLOAD_TITLE" 
+            description="COM_JDOWNLOADS_FILESEDIT_FILE_FROM_OTHER_DOWNLOAD_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field\Modal"
+            required="false"
+			default="0"
+        />
+       
+        <field name="use_xml" 
+            type="radio"
+            label="COM_JDOWNLOADS_BE_EDIT_FILES_USE_XML_TITLE"
+            description="COM_JDOWNLOADS_BE_EDIT_FILES_USE_XML_DESC"
+            layout="joomla.form.field.radio.switcher" 
+            size="1"
+            default="0">
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>            
+        
+        <field
+            name="extern_file"
+            type="text"
+            class="inputbox" 
+            size="60"            
+            filter="url"
+            label="COM_JDOWNLOADS_BACKEND_FILE_EDIT_EXT_DOWNLOAD_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_FILE_EDIT_EXT_DOWNLOAD_DESC" 
+            required="false" />
+            
+        <field 
+            name="extern_site" 
+            type="radio"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_OPEN_LINK_IN_OTHER_WEBSITE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_OPEN_LINK_IN_OTHER_WEBSITE_DESC"
+            layout="joomla.form.field.radio.switcher"
+            default="0">
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <!-- for preview file -->
+        <field 
+            name="preview_file_upload" 
+            type="file" 
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_PREVIEW_FILE" 
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_PREVIEW_FILE_DESC" 
+            size="50" 
+            accept="" />
+
+        <field
+            name="preview_filename"
+            type="text"
+            class="inputbox" 
+            size="50"            
+            filter="unset"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_PREVIEW_FILE_ADD_FROM_SERVER"
+            description=""
+            readonly="true" 
+            required="false" />            
+        
+        <field
+            name="mirror_1"
+            type="text"
+            class="inputbox" 
+            filter="unset"
+            size="60"            
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_MIRROR_URL_TITLE1"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_MIRROR_URL_DESC1" 
+            required="false" />
+            
+        <field 
+            name="extern_site_mirror_1" 
+            type="radio"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_OPEN_LINK_IN_OTHER_WEBSITE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_OPEN_LINK_IN_OTHER_WEBSITE_DESC"
+            layout="joomla.form.field.radio.switcher" 
+            size="1"
+            default="0">
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="mirror_2"
+            type="text"
+            class="inputbox" 
+            size="60"            
+            filter="unset"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_MIRROR_URL_TITLE2"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_MIRROR_URL_DESC2" 
+            required="false" />
+            
+        <field 
+            name="extern_site_mirror_2" 
+            type="radio"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_OPEN_LINK_IN_OTHER_WEBSITE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_OPEN_LINK_IN_OTHER_WEBSITE_DESC"
+            layout="joomla.form.field.radio.switcher"
+            size="1"
+            default="0">
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="md5_value"
+            type="text"
+            class="readonly" 
+            size="40"            
+            filter="unset"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_MD5"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_MD5_DESC" 
+            required="false"
+            readonly="true" />        
+
+        <field
+            name="sha1_value"
+            type="text"
+            class="readonly" 
+            size="40"            
+            filter="unset"
+            label="COM_JDOWNLOADS_BACKEND_FILESEDIT_SHA1"
+            description="COM_JDOWNLOADS_BACKEND_FILESEDIT_SHA1_DESC" 
+            required="false"
+            readonly="true" />        
+        
+        
+        <field
+            name="images"
+            type="hidden"
+            class="inputbox" 
+            rows="4"
+            cols="50"
+            filter="unset"
+            label="Images"
+            description="" 
+            readonly="true"
+            required="false" />
+
+        <field name="permissions_warning"
+            type="note"
+            label=""
+            description="COM_JDOWNLOADS_SET_CREATE_PERMISSIONS_WARNING"
+            class="alert alert-danger" />            
+<!-- meta tab-->           
+        <field
+            name="metadesc"
+            type="textarea"
+            label="COM_JDOWNLOADS_META_DESCRIPTION_LABEL"
+            description="COM_JDOWNLOADS_META_DESCRIPTION_DESC"
+			rows="3"
+			cols="30"
+			maxlength="160"
+			charcounter="true" />
+
+        <field
+            name="metakey"
+            type="textarea"
+            label="COM_JDOWNLOADS_META_KEYWORDS_LABEL"
+            description="COM_JDOWNLOADS_META_KEYWORDS_DESC"
+            rows="4"
+            cols="40"/>
+            
+        <field 
+            name="robots"
+            type="list"
+            label="COM_JDOWNLOADS_ROBOTS_LABEL"
+            description="COM_JDOWNLOADS_ROBOTS_DESC"
+			validate="options"
+            >
+            <option value="">COM_JDOWNLOADS_USE_GLOBAL</option>
+            <option value="index, follow">COM_JDOWNLOADS_INDEX_FOLLOW</option>
+            <option value="noindex, follow">COM_JDOWNLOADS_NOINDEX_FOLLOW</option>
+            <option value="index, nofollow">COM_JDOWNLOADS_INDEX_NOFOLLOW</option>
+            <option value="noindex, nofollow">COM_JDOWNLOADS_NOINDEX_NOFOLLOW</option>
+        </field>
+		
+	</fieldset>		
+            
+    </form>

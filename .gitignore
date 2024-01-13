@@ -1,0 +1,6 @@
+htb_venv
+wordlist.txt
+*/.git
+*/*.local.key
+./KEEPER/assets/KeePassDumpFull.dmp
+./KEEPER/assets/RT30000.zip

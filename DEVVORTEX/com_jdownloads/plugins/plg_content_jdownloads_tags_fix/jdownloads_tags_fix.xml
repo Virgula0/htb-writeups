@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+		<name>plg_content_jdownloads_tags_fix</name>
+        <author>Arno Betz</author>
+        <creationDate>2022-09-07</creationDate>
+        <copyright>Copyright (C) 2007 - 2022 by Arno Betz</copyright>
+        <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+        <authorEmail>info@jdownloads.com</authorEmail>
+        <authorUrl>www.jdownloads.com</authorUrl>
+        <version>4.0</version>
+		<description>PLG_CONTENT_JDOWNLOADS_TAGS_FIX_DESCRIPTION</description>
+		<files>
+			<filename plugin="jdownloads_tags_fix">jdownloads_tags_fix.php</filename>
+			<folder>language</folder>
+		</files>
+</extension>

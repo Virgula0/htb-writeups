@@ -1,0 +1,2913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+    <fieldset name="hints"
+        label="COM_JDOWNLOADS_CONFIG_HINTS"
+        description="COM_JDOWNLOADS_CONFIG_HINTS_DESC">
+        
+		<field name="note1" type="note" class="alert alert-info" label="" description="COM_JDOWNLOADS_SETTINGS_HINT_ON_USER_GROUPS_SETTINGS" />
+        <field name="note2" type="note" class="alert alert-info" label="" description="COM_JDOWNLOADS_MULTILANGUAGE_TEXT_FIELD_INFO_SHORT" />
+    
+    </fieldset>
+    
+    <fieldset name="path"
+        label="COM_JDOWNLOADS_CONFIG_PATH_SETTINGS"
+        description="COM_JDOWNLOADS_BACKEND_SETTINGS_UPLOADDIR_DESC"
+        addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field">
+     
+        <field
+            name="files_uploaddir" 
+            type="JDRootDirConfig"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_UPLOADDIR"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_UPLOADDIR_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            required="true"
+            filter="string"
+            class="inputbox"
+            maxlength="500" 
+        />
+        
+        <field
+            name="preview_files_folder_name" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_UPLOADDIR_PREVIEW"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_UPLOADDIR_PREVIEW_DESC"
+            required="true"
+            filter="string"
+            class="inputbox"
+            default="_preview_files"
+            maxlength="250" 
+        />    
+    
+        <field
+            name="tempzipfiles_folder_name" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_UPLOADDIRTEMP"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_UPLOADDIRTEMP_DESC"
+            required="true"
+            filter="string"
+            class="inputbox"
+            default="_tempzipfiles"    
+            maxlength="250" 
+        />
+        
+        <field name="root_dir" type="JDHiddenConfig" label="" path="root" addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field" />
+        <field name="preview_dir" type="JDHiddenConfig" label="" path="preview" addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field" />
+        <field name="temp_dir" type="JDHiddenConfig" label="" path="temp" addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field" />
+		<field name="help_url" type="JDHiddenConfig" label="" path="https://www.jdownloads.net/help-server/{language}/" addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field" />
+            
+    </fieldset> 
+        
+    <fieldset name="global"
+        description="COM_JDOWNLOADS_CONFIG_GLOBAL_SETTINGS"
+        label="COM_JDOWNLOADS_CONFIG_GLOBAL_SETTINGS"
+        >
+        
+        <field
+            name="custom_fields_enable"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            label="COM_JDOWNLOADS_CONFIG_CUSTOM_FIELDS_ENABLE_LABEL"
+            description="COM_JDOWNLOADS_CONFIG_CUSTOM_FIELDS_ENABLE_DESC"
+            default="1"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+		</field>
+
+        <field type="spacer" name="myspacer9b0" hr="true" />		
+		
+        <field
+            name="global_datetime" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_DATETIME"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_DATETIME_DESC"
+            filter="raw"
+            class="inputbox"
+            default=""    
+            maxlength="50" 
+        />  
+
+        <field
+            name="global_datetime_short" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_DATETIME_SHORT"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_DATETIME_SHORT_DESC"
+            filter="raw"
+            class="inputbox"
+            default=""    
+            maxlength="50" 
+        />        
+        
+        <field
+            name="use_php_script_for_download"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_SRIPT_FOR_DOWNLOAD_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_SRIPT_FOR_DOWNLOAD_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="activate_download_log"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SET_LOGGING_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SET_LOGGING_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="delete_also_images_from_downloads"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_IMAGES_DELETE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_IMAGES_DELETE_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="delete_also_preview_files_from_downloads"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_PREVIEW_DELETE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_PREVIEW_DELETE_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="file_types_view" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_VIEW_FILE_TYPES"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_VIEW_FILE_TYPES_DESC"
+            filter="string"
+            class="inputbox"
+            default="html,htm,txt,pdf,doc,jpg,jpeg,png,gif"    
+            maxlength="250" 
+        />
+        
+        <field type="spacer" name="myspacer" hr="true" />
+        
+        <field
+            name="zipfile_prefix" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_ZIPFILE_PREFIX_TEXT"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_ZIPFILE_PREFIX_DESC"
+            filter="string"
+            required="true"
+            class="inputbox"
+            default="downloads_"    
+            maxlength="50" 
+        />
+           
+        <field
+            name="tempfile_delete_time" 
+            type="integer"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_DEL_TEMPFILE_TIME"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_DEL_TEMPFILE_TIME_DESC"
+            first="10"
+            last="90"
+            step="10"
+            class="inputbox"
+            default="20"    
+        />
+        
+        <field type="spacer" name="myspacer9c" hr="true" />
+        
+        <field
+            name="be_upload_amount_of_pictures" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_HOW_MANY_IMAGES"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_HOW_MANY_IMAGES_BE_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="2"
+            default="10" 
+        />
+
+        <field
+            name="be_amount_of_pics_in_downloads_list" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_HOW_MANY_IMAGES_IN_LISTS"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_HOW_MANY_IMAGES_IN_LISTS_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="2"
+            default="3" 
+        />
+
+        <field
+            name="view_preview_file_in_downloads_list" 
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_PREVIEW_FILE_IN_LISTS"
+            description=""
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+		<field
+            name="view_price_field_in_downloads_list" 
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_PRICE_FIELD_IN_LISTS"
+            description=""
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="system_list" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FILE_SYSTEM_LIST"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FILE_SYSTEM_LIST_DESC"
+            filter="string"
+            class="inputbox"
+        />                
+
+        <field
+            name="language_list" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FILE_LANGUAGE_LIST"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FILE_LANGUAGE_LIST_DESC"
+            filter="string"
+            class="inputbox"
+        />
+        
+        <field
+            name="checkbox_top_text" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CHECKBOX_TEXT"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CHECKBOX_TEXT_DESC"
+            filter="raw"
+            class="inputbox"
+            default=""
+        />
+        
+        <field name="robots"
+            type="list"
+            label="COM_JDOWNLOADS_ROBOTS_LABEL"
+            description="COM_JDOWNLOADS_ROBOTS_CONFIG_DESC"
+            >
+            <option value="">COM_JDOWNLOADS_USE_GLOBAL</option>
+            <option value="index, follow">COM_JDOWNLOADS_INDEX_FOLLOW</option>
+            <option value="noindex, follow">COM_JDOWNLOADS_NOINDEX_FOLLOW</option>
+            <option value="index, nofollow">COM_JDOWNLOADS_INDEX_NOFOLLOW</option>
+            <option value="noindex, nofollow">COM_JDOWNLOADS_NOINDEX_NOFOLLOW</option>
+        </field>
+    </fieldset>
+    <!--  Monitoring Tab -->
+    <fieldset name="monitoring"
+        label="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_TAB_TITLE"
+        description="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_HEADER_TITLE">
+    
+        <field name="note862" type="note" description="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_DESC" class="alert alert-info" />
+        
+		<field type="note" name="myspacer303"  label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_1" class="" />		
+        
+        <field
+            name="use_first_testrun"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_USE_TESTRUN_FIRST_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_USE_TESTRUN_FIRST_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="all_files_autodetect"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_ALL_FILES_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_ALL_FILES_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+		
+        <field
+            name="file_types_autodetect" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_ONLY_THIS_FILES_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_ONLY_THIS_FILES_DESC"
+            filter="string"
+            required="false"
+            class="inputbox"
+            default="zip,rar,exe,pdf,doc,gif,jpg,png"    
+            maxlength="300"
+            showon="all_files_autodetect:0"            
+        />
+
+        <field
+            name="all_folders_autodetect"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_ALL_FOLDERS_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_ALL_FOLDERS_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="include_or_exclude"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_EX_INCLUDE_FOLDERS_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_EX_INCLUDE_FOLDERS_DESC"
+			showon="all_folders_autodetect:0"
+            >
+            <option value="1">COM_JDOWNLOADS_EXCLUDE</option>
+            <option value="0">COM_JDOWNLOADS_INCLUDE</option>
+        </field>
+		
+        <field
+            name="include_or_exclude_folders" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_EX_INCLUDE_LIST_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_EX_INCLUDE_LIST_DESC"
+            filter="raw"
+            class="inputbox"
+            default=""
+			showon="all_folders_autodetect:0"
+        />
+
+		<field
+            name="autopublish_founded_files"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_DOWNLOADS_AUTOPUBLISH_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_DOWNLOADS_AUTOPUBLISH_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field> 		
+        
+		<field type="note" name="myspacer3e"  label="COM_JDOWNLOADS_CONFIG_MO_TAB_SECTION_1" class="" />
+
+        
+        <field
+            name="autopublish_use_cat_default_values"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_CONFIG_MO_DEFAULT_VALUES_CAT_LABEL"
+            description="COM_JDOWNLOADS_CONFIG_MO_DEFAULT_VALUES_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="autopublish_cat_pic_default_filename" 
+            type="JDCatIconConfigScan"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_DEFAULT_CAT_PIC_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_DEFAULT_CAT_PIC_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            class="inputbox"
+            default="folder.png"
+            hide_default="true"
+            directory="images/jdownloads/catimages/" 
+            filter="\.png$|\.gif$|\.jpg$|\.bmp$|"             
+			showon="autopublish_use_cat_default_values:1"
+        />
+
+        <field
+            name="autopublish_default_cat_description" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_CAT_FAUTO_DEFAULT_TEXT"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_CAT_FAUTO_DEFAULT_TEXT_DESC"
+            filter="raw"
+            class="inputbox"
+            default=""
+			showon="autopublish_use_cat_default_values:1"
+        />
+
+		<field 
+			name="autopublish_cat_access_level" 
+			type="accesslevel"
+			label="COM_JDOWNLOADS_ACCESS"
+			description="COM_JDOWNLOADS_CONFIG_MO_DEFAULT_VALUES_CAT_ACCESS_DESC"
+			showon="autopublish_use_cat_default_values:1"
+		/>
+
+		<field 
+            name="autopublish_cat_language"
+            type="contentlanguage"
+            label="COM_JDOWNLOADS_BACKEND_FILESLIST_LANGUAGE"
+            description="COM_JDOWNLOADS_LANGUAGE_DESC2"
+			showon="autopublish_use_cat_default_values:1"
+            class="inputbox">
+            <option value="*">COM_JDOWNLOADS_ALL</option>
+        </field>
+		
+		<field
+            name="autopublish_cat_tags"
+            type="tag"
+            label="COM_JDOWNLOADS_TAGS_LABEL"
+            description="COM_JDOWNLOADS_CONFIG_MO_DEFAULT_VALUES_CAT_TAGS_DESC"
+            class="inputbox"
+            multiple="true"
+			showon="autopublish_use_cat_default_values:1"
+		/>
+		
+		<field 
+			name="autopublish_cat_created_by" 
+			type="user"
+            label="COM_JDOWNLOADS_CREATED_BY"
+            description="COM_JDOWNLOADS_CREATED_BY_DESC"
+			showon="autopublish_use_cat_default_values:1"
+		/>		
+		
+		<field type="spacer" name="myspacer3g"  hr="true" class="" />
+		
+		<field
+            name="autopublish_use_default_values"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_CONFIG_MO_DEFAULT_VALUES_DOWN_LABEL"
+            description="COM_JDOWNLOADS_CONFIG_MO_DEFAULT_VALUES2_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+		<field
+            name="autopublish_title_format_option"
+            type="list"
+            class=""
+            default="0"
+            label="COM_JDOWNLOADS_CONFIG_MO_DEFAULT_TITLE_OPTION_LABEL"
+            description="COM_JDOWNLOADS_CONFIG_MO_DEFAULT_TITLE_OPTION_DESC"
+			showon="autopublish_use_default_values:1"
+            >
+            <option value="0">COM_JDOWNLOADS_CONFIG_MO_DEFAULT_TITLE_OPTION1</option>
+            <option value="1">COM_JDOWNLOADS_CONFIG_MO_DEFAULT_TITLE_OPTION2</option>
+			<option value="2">COM_JDOWNLOADS_CONFIG_MO_DEFAULT_TITLE_OPTION3</option>
+        </field>
+
+        <field
+            name="autopublish_default_description" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_DEFAULT_TEXT"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FAUTO_DEFAULT_TEXT_DESC"
+            filter="raw"
+            class="inputbox"
+            default=""
+			showon="autopublish_use_default_values:1"
+        />
+
+		<field 
+			name="autopublish_access_level" 
+			type="accesslevel"
+			label="COM_JDOWNLOADS_ACCESS"
+			description="COM_JDOWNLOADS_CONFIG_MO_DEFAULT_VALUES_ACCESS_DESC"
+			showon="autopublish_use_default_values:1"
+		/>
+
+		<field 
+            name="autopublish_language"
+            type="contentlanguage"
+            label="COM_JDOWNLOADS_BACKEND_FILESLIST_LANGUAGE"
+            description="COM_JDOWNLOADS_LANGUAGE_DESC2"
+			showon="autopublish_use_default_values:1"
+            class="inputbox">
+            <option value="*">COM_JDOWNLOADS_ALL</option>
+        </field>
+
+		<field
+            name="autopublish_tags"
+            type="tag"
+            label="COM_JDOWNLOADS_TAGS_LABEL"
+            description="COM_JDOWNLOADS_CONFIG_MO_DEFAULT_VALUES_TAGS_DESC"
+            class="inputbox"
+            multiple="true"
+			showon="autopublish_use_default_values:1"
+        />
+        
+		<field 
+			name="autopublish_created_by" 
+			type="user"
+            label="COM_JDOWNLOADS_CREATED_BY"
+            description="COM_JDOWNLOADS_CREATED_BY_DESC"
+			showon="autopublish_use_default_values:1"
+		/>
+		
+        <field
+            name="autopublish_price" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_FILESLIST_PRICE"
+            description=""
+            filter=""
+            class="inputbox"
+            maxlength="20"
+			showon="autopublish_use_default_values:1"
+        /> 
+
+		<field type="spacer" name="myspacer9b2" hr="true" />
+
+		<field
+            name="autopublish_reset_use_default_values"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_CONFIG_MO_DEFAULT_VALUES_OFF_LABEL"
+            description="COM_JDOWNLOADS_CONFIG_MO_DEFAULT_VALUES_OFF_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field type="note" name="myspacer3b"  label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_13" class="" />
+        
+        <field
+            name="disable_server_limits" 
+            type="radio"
+            label="COM_JDOWNLOADS_DISABLE_SERVER_LIMITS_LABEL"
+            description="COM_JDOWNLOADS_DISABLE_SERVER_LIMITS_DESC"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="view_debug_info" 
+            type="radio"
+            label="COM_JDOWNLOADS_AUTOCHECK_VIEW_DEBUG_LABEL"
+            description="COM_JDOWNLOADS_AUTOCHECK_VIEW_DEBUG_DESC"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="max_size_log_file" 
+            type="text"
+            label="COM_JDOWNLOADS_CONFIG_AUTOCHECK_LOG_LIMIT_LABEL"
+            description="COM_JDOWNLOADS_CONFIG_AUTOCHECK_LOG_LIMIT_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="3"
+            default="32" 
+        />                
+    </fieldset>     
+    
+	<!--  Frontend Tab -->
+    <fieldset name="frontend"
+        label="COM_JDOWNLOADS_BACKEND_SETTINGS_TABTEXT_FRONTEND"
+        description="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_FRONTEND_HEAD"
+        >
+		
+		<field name="note869" type="note" description="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_FRONTEND_HEAD_DESC" class="alert alert-info" />
+		
+		<field type="note" name="myspacer303"  label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_1" class="" />		
+		<!--  active maintenance section -->
+        <field
+            name="offline"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_OFFLINE_OPTION_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_OFFLINE_OPTION_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="offline_text" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_OFFLINE_MESSAGE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_OFFLINE_MESSAGE_DESC"
+            filter="safehtml"
+            class="inputbox"
+            default=""
+            showon="offline:1"
+        />
+		<!--  component desc section -->
+        <field
+            name="downloads_titletext" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_COMPO_TEXT"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_COMPO_TEXT_DESC"
+            filter="raw"
+            class="inputbox"
+            default=""
+        />
+		<!--  Footer text -->
+        <field
+            name="downloads_footer_text" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_FOOTER_TEXT_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_FOOTER_TEXT_DESC"
+            filter="raw"
+            class="inputbox"
+            default=""
+        />
+        
+        <field type="note" name="myspacer2c"  label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_2" class="" />
+		
+		<!--  URL routing section -->        
+        <field
+            name="sef_advanced"
+            type="radio"
+			layout="joomla.form.field.radio.switcher"
+            default="0"
+			readonly="true"
+            label="COM_JDOWNLOADS_CONFIG_SEF_ADVANCED_LABEL"
+            description="COM_JDOWNLOADS_CONFIG_SEF_ADVANCED_DESC"
+            filter="integer">
+            <option value="0">COM_JDOWNLOADS_CONFIG_SEF_ADVANCED_LEGACY</option>
+            <option value="1">COM_JDOWNLOADS_CONFIG_SEF_ADVANCED_MODERN</option>
+        </field>
+
+        <field
+            name="sef_ids"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_CONFIG_SEF_NOIDS_LABEL"
+            description="COM_JDOWNLOADS_CONFIG_SEF_NOIDS_DESC"
+            showon="sef_advanced:1"
+            filter="integer">
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field type="note" name="myspacer2"  label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_3" class="" />
+		
+		<!--  Associations section -->
+		<field
+			name="show_associations"
+			type="radio"
+			label="COM_JDOWNLOADS_CONFIG_SHOW_ASSOCIATIONS_LABEL"
+			description="COM_JDOWNLOADS_CONFIG_SHOW_ASSOCIATIONS_DESC"
+			layout="joomla.form.field.radio.switcher"
+			default="0"
+			>
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+		</field>
+				
+		<field
+			name="flags"
+			type="radio"
+			label="COM_JDOWNLOADS_CONFIG_SHOW_FLAG_LABEL"
+			description="COM_JDOWNLOADS_CONFIG_SHOW_FLAG_DESC"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			showon="show_associations:1"
+			>
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+		</field>
+        
+        <field type="note" name="myspacer9b"  label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_4" class="" />		
+		<!--  CSS section -->        
+		<field
+			name="load_frontend_css"
+			type="radio"
+			label="COM_JDOWNLOADS_CONFIG_LOAD_FRONTEND_CSS_LABEL"
+			description="COM_JDOWNLOADS_CONFIG_LOAD_FRONTEND_CSS_DESC"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+		</field>
+		
+		<field
+            name="own_css_file" 
+            type="text"
+            label="COM_JDOWNLOADS_CONFIG_LOAD_OWN_CSS_LABEL"
+            description="COM_JDOWNLOADS_CONFIG_LOAD_OWN_CSS_DESC"
+            filter="path"
+            class="inputbox"
+            maxlength="25" 
+			showon="load_frontend_css:0"
+        />
+		
+		<field type="note" name="myspacer9bb" label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_5" class="" />		
+		<!--  Nos top level Categories/page -->        
+        <field
+            name="categories_per_side" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATS_PER_SIDE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATS_PER_SIDE_DESC"
+            required="true"
+            filter="integer"
+            class="inputbox"
+            default="5"
+            maxlength="3" 
+        />
+		<!--  subcategories/page -->        
+        <field
+            name="amount_subcats_per_page_in_pagination" 
+            type="integer"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_PAGENAVI_AMOUNT_SUBCATS_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_PAGENAVI_AMOUNT_SUBCATS_DESC"
+            first="1"
+            last="25"
+            step="1"
+            class="inputbox"
+            default="5"
+            showon="use_pagination_subcategories:1"    
+        />        
+		<!--  downloads/page -->        
+        <field
+            name="files_per_side" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_FILES_PER_SIDE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_FILES_PER_SIDE_DESC"
+            required="true"
+            filter="integer"
+            class="inputbox"
+            default="10"
+            maxlength="3" 
+        />
+		
+		<field type="note" name="myspacer4" label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_6" class="" />
+		
+		<!--  NAVIGATION SECTION --> 
+		<!--  navigation at top -->		
+        <field
+            name="option_navigate_top"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_PAGENAVI_TOP_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_PAGENAVI_TOP_TEXT"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+		<!--  navigation at bottom -->
+        <field
+            name="option_navigate_bottom"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_PAGENAVI_BOTTOM_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_PAGENAVI_BOTTOM_TEXT"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>        
+		<!--  navigation at for subcats -->        
+        <field
+            name="use_pagination_subcategories"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_PAGENAVI_SUBCATS_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_PAGENAVI_SUBCATS_TEXT"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+		
+		<field
+            name="view_back_button"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_BACK_BUTTON"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_BACK_BUTTON_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+
+		
+		<field type="note" name="myspacer301" label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_7" class="" />
+		
+		<!--  sort order section section -->        
+        <field
+            name="cats_order"
+            type="list"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_SORTCATSORDER_TEXT"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_SORTCATSORDER_DESC"
+            multiple="false"
+            default="0"
+            >
+            <option value="0">COM_JDOWNLOADS_CATEGORY_MANAGER_ORDER</option>
+            <option value="1">COM_JDOWNLOADS_TITLE_ALPHABETICAL</option>
+            <option value="2">COM_JDOWNLOADS_TITLE_REVERSE_ALPHABETICAL</option>
+        </field>
+        
+        <field
+            name="files_order"
+            type="list"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_SORTFILESORDER_TEXT"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_SORTFILESORDER_DESC"
+            multiple="false"
+            default="0"
+            >
+            <option value="0">COM_JDOWNLOADS_DOWNLOADS_ORDERING</option>
+            <option value="1">COM_JDOWNLOADS_DOWNLOADS_MOST_RECENT_FIRST</option>
+            <option value="2">COM_JDOWNLOADS_DOWNLOADS_OLDEST_FIRST</option>
+            <option value="3">COM_JDOWNLOADS_TITLE_ALPHABETICAL</option>
+            <option value="4">COM_JDOWNLOADS_TITLE_REVERSE_ALPHABETICAL</option>
+            <option value="5">COM_JDOWNLOADS_DOWNLOADS_MOST_HITS</option>
+            <option value="6">COM_JDOWNLOADS_DOWNLOADS_LEAST_HITS</option>
+            <option value="7">COM_JDOWNLOADS_DOWNLOADS_AUTHOR_ALPHABETICAL</option>
+            <option value="8">COM_JDOWNLOADS_DOWNLOADS_AUTHOR_REVERSE_ALPHABETICAL</option>
+            <option value="9">COM_JDOWNLOADS_DOWNLOADS_FEATURED</option>
+        </field> 
+		
+		<field type="note" name="myspacer5"  label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_8" class="" />
+        
+        <field
+            name="view_sort_order"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SET_VIEW_FE_ORDERING_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SET_VIEW_FE_ORDERING_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="sortorder_fields"
+            type="list"
+            label="COM_JDOWNLOADS_FE_SORT_ORDER_TITLE"
+            description="COM_JDOWNLOADS_FE_SORT_ORDER_DESK"
+            multiple="true"
+            default="-1"
+            showon="view_sort_order:1" 
+            >
+            <option value="0">COM_JDOWNLOADS_FE_SORT_ORDER_DEFAULT</option>
+            <option value="1">COM_JDOWNLOADS_FE_SORT_ORDER_NAME</option>
+            <option value="2">COM_JDOWNLOADS_FE_SORT_ORDER_AUTHOR</option>
+            <option value="3">COM_JDOWNLOADS_FE_SORT_ORDER_DATE</option>
+            <option value="4">COM_JDOWNLOADS_FE_SORT_ORDER_HITS</option>
+            <option value="5">COM_JDOWNLOADS_FE_SORT_ORDER_FEATURED</option>
+        </field>
+    
+        <field type="note" name="myspacer2h" label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_9" class="" />     
+		
+		<!--  download sequence section -->    
+        <field
+            name="direct_download"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_DIRECT_DOWNLOAD_ACTIVE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_DIRECT_DOWNLOAD_ACTIVE_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="view_detailsite"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_DETAILSITE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_DETAILSITE_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="use_download_title_as_download_link"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_TITLE_AS_LINK_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_TITLE_AS_LINK_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+		
+		<field
+            name="link_in_symbols"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_LINK_IN_SYMBOLS"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_LINK_IN_SYMBOLS_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field type="note" name="myspacer3" label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_10" class="" />
+		
+		<!--  links section -->        
+        <field
+            name="show_header_catlist"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATLISTBOX_ACTIVE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATLISTBOX_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+		
+		<field
+            name="show_header_catlist_levels"
+            type="integer"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATLISTBOX_LEVELS"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATLISTBOX_LEVELS_DESC"
+            showon="show_header_catlist:1"
+			first="0"
+            last="7"
+            step="1"
+            class="inputbox"
+            default="0"
+        />
+
+        <field
+            name="show_header_catlist_all"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATLISTBOX_ALL_ACTIVE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATLISTBOX_ALL_DESC"
+            showon="show_header_catlist:1"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="show_header_catlist_topfiles"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATLISTBOX_TOP_ACTIVE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATLISTBOX_TOP_DESC"
+            showon="show_header_catlist:1"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="show_header_catlist_newfiles"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATLISTBOX_NEW_ACTIVE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATLISTBOX_NEW_DESC"
+            showon="show_header_catlist:1"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="use_caching_for_category_box"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_CATLISTBOX_USE_CACHE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_CATLISTBOX_USE_CACHE_HINT"
+            showon="show_header_catlist:1"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+		
+		<field
+			name="use_caching_for_category_box_duration"
+			type="number"
+			min="1"
+			default="15"
+			label="COM_JDOWNLOADS_BACKEND_SETTINGS_CATLISTBOX_CACHE_TIME_TITLE"
+			description="COM_JDOWNLOADS_BACKEND_SETTINGS_CATLISTBOX_CACHE_TIME_HINT"
+			required="true"
+			filter="integer"
+			validate="number"
+			showon="use_caching_for_category_box:1"
+		/>
+		
+        <field type="note" name="myspacer305"  label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_11" class="" />
+                
+        <field
+            name="view_category_info"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_CAT_VIEW_INFO_IN_LISTS_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_CAT_VIEW_INFO_IN_LISTS_TEXT"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <!-- Until we could fix the problems with this option when it has the value = 0, we let it hidden and always value = 1
+		<field
+            name="view_empty_categories"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_EMPTY_CATEGORIES"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_EMPTY_CATEGORIES_DESC"
+            >
+            <option value="1">COM_JDOWNLOADS_YES</option>
+            <option value="0">COM_JDOWNLOADS_NO</option>
+        </field>-->
+		
+		<field name="view_empty_categories" type="hidden" default="1" />
+
+        <field
+            name="view_no_file_message_in_empty_category"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_NO_FILE_MSG"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_NO_FILE_MSG_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>        
+        
+        <field type="note" name="myspacer3b"  label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_13" class="" />
+        
+        <field
+            name="use_caching_for_some_queries"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_CACHING_FOR_SOME_QUERIES"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_CACHING_FOR_SOME_QUERIES_HINT"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+		
+		<field
+			name="use_caching_for_some_queries_duration"
+			type="number"
+			min="1"
+			default="15"
+			label="COM_JDOWNLOADS_BACKEND_SETTINGS_CACHING_SOME_QUERIES_DURATION"
+			description="COM_JDOWNLOADS_BACKEND_SETTINGS_CACHING_SOME_QUERIES_DURATION_HINT"
+			required="true"
+			filter="integer"
+			validate="number"
+			showon="use_caching_for_some_queries:1"
+		/>
+		
+		<field
+            name="remove_field_title_when_empty"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SET_REMOVE_TITLE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SET_REMOVE_TITLE_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="remove_empty_tags"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_DEL_EMPTY_TAGS_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_DEL_EMPTY_TAGS_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>        
+		
+        <field
+            name="use_lightbox_function"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_LIGHTBOX_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_LIGHTBOX_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>        
+
+        <field
+            name="activate_general_plugin_support"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SET_CONTENT_SUPPORT_FOR_ALL_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SET_CONTENT_SUPPORT_FOR_ALL_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <!-- <field
+            name="use_general_plugin_support_only_for_descriptions"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SET_CONTENT_SUPPORT_FOR_DESC_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SET_CONTENT_SUPPORT_FOR_DESC_DESC"
+            showon="activate_general_plugin_support:1" 
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field> -->
+        
+        <field
+            name="use_real_user_name_in_frontend"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_REAL_NAME_IN_FRONTEND"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_REAL_NAME_IN_FRONTEND_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="shortened_filename_length"
+            type="integer"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SHORTENED_FILENAME_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SHORTENED_FILENAME_DESC"
+            first="0"
+            last="40"
+            step="5"
+            class="inputbox"
+            default="0"
+        />        
+
+        <field
+            name="auto_file_short_description_value"
+            type="integer"
+            label="COM_JDOWNLOADS_BACKEND_USE_CUT_DESCRIPTION_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_USE_CUT_DESCRIPTION_TITLE_DESC"
+            first="0"
+            last="500"
+            step="50"
+            class="inputbox"
+            default="0"
+        />  
+
+        <field
+            name="auto_cat_short_description_value"
+            type="integer"
+            label="COM_JDOWNLOADS_BACKEND_CAT_USE_TRUNCATED_DESCRIPTION_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_CAT_USE_TRUNCATED_DESCRIPTION_DESC"
+            first="0"
+            last="500"
+            step="50"
+            class="inputbox"
+            default="0"
+        /> 
+        
+        <field
+            name="redirect_after_download"
+            type="integer"
+            label="COM_JDOWNLOADS_BACKEND_SET_REDIRECT_FOR_DOWNLOAD_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SET_REDIRECT_FOR_DOWNLOAD_DESC"
+            first="0"
+            last="30"
+            step="1"
+            class="inputbox"
+            default="0"
+        />        
+
+        <field type="note" name="myspacer6"  label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_14" class="" />
+               
+        <field
+            name="use_tabs_type"
+            type="list"
+            class=""
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SET_USE_TABS_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SET_USE_TABS_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+            <option value="1">COM_JDOWNLOADS_BACKEND_SET_USE_TABS_BOX_SLIDERS</option>
+            <option value="2">COM_JDOWNLOADS_BACKEND_SET_USE_TABS_BOX_TABS</option>
+        </field>
+        
+        <field
+            name="additional_tab_title_1" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SET_CUSTOM_TAB_TITLES_TITLE1"
+            description="COM_JDOWNLOADS_BACKEND_SET_CUSTOM_TAB_TITLES_DESC"
+            filter="string"
+            class="inputbox"
+            maxlength="50"
+            showon="use_tabs_type:1,2" 
+        />
+
+        <field
+            name="additional_tab_title_2" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SET_CUSTOM_TAB_TITLES_TITLE2"
+            description="COM_JDOWNLOADS_BACKEND_SET_CUSTOM_TAB_TITLES_DESC"
+            filter="string"
+            class="inputbox"
+            maxlength="50"
+            showon="use_tabs_type:1,2"  
+        />
+
+        <field
+            name="additional_tab_title_3" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SET_CUSTOM_TAB_TITLES_TITLE3"
+            description="COM_JDOWNLOADS_BACKEND_SET_CUSTOM_TAB_TITLES_DESC"
+            filter="string"
+            class="inputbox"
+            maxlength="50" 
+            showon="use_tabs_type:1,2" 
+        />
+        
+        <field type="note" name="myspacer7"  label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_15" class="" />
+        
+        <field
+            name="view_ratings"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_RATING_ON_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_RATING_ON_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>                                        
+    
+        <field
+            name="rating_only_for_regged"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_RATING_ONLY_REGGED_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_RATING_ONLY_REGGED_DESC"
+            showon="view_ratings:1"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field> 
+
+        <field type="note" name="myspacer9"  label="COM_JDOWNLOADS_CONFIG_FE_TAB_SECTION_16" class="" />
+        
+        <field
+            name="jcomments_active"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_JCOMMENTS_TITLE2"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_JCOMMENTS_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="view_sum_jcomments"
+            type="radio"
+			layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_JCOMMENTS_VIEW_SUM_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_JCOMMENTS_VIEW_SUM_DESC"
+            showon="jcomments_active:1"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field> 
+                 
+		<field name="note70b" type="note" class="" label="COM_JDOWNLOADS_BACKEND_SETTINGS_KOMENTO_HINT" description="" />
+                 
+    </fieldset>    
+        
+    <fieldset name="pictures_and_buttons"
+        label="COM_JDOWNLOADS_BACKEND_SETTINGS_TABTEXT_IMAGES"
+        description="COM_JDOWNLOADS_BACKEND_SETTINGS_TABTEXT_IMAGES"
+        addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field">
+
+        <field name="note70" type="note" class="alert alert-info" label="" description="COM_JDOWNLOADS_BACKEND_SETTINGS_IMAGES_NOTE" />
+        
+        <field name="note60" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_IMAGES_HEAD" />
+        
+        <field
+            name="info_icons_size" 
+            type="JDInfoIconsConfig"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_MINIPICS_SIZE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_MINIPICS_SIZE_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            filter="integer"
+            class="inputbox"
+            maxlength="2"
+        />
+
+		<field name="note70b" type="note" class="alert alert-info" label="" description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_USE_SYMBOLE_INFO" />
+		
+		
+		<field name="note60c" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_IMAGES_CATEG" />
+
+        <field
+            name="cat_pic_default_filename" 
+            type="JDCatIconConfig"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_DEFAULT_CAT_PIC_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_DEFAULT_CAT_PIC_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            class="inputbox"
+            default="folder.png"
+            hide_default="true"
+            directory="images/jdownloads/catimages/" 
+            filter="\.png$|\.gif$|\.jpg$|\.bmp$|"             
+        />
+
+        <field
+            name="cat_pic_size" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATPICS_SIZE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATPICS_SIZE_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="2"
+            default="48" 
+        />
+        
+        <field
+            name="cat_pic_size_height" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATPICS_SIZE2"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_CATPICS_SIZE_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="2"
+            default="48" 
+        />
+        
+		<field name="note60d" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_IMAGES_FILETYPE" />
+                
+        <field
+            name="use_file_type_symbols"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_FILE_TYPE_SYMBOLS"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_FILE_TYPE_SYMBOLS_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="selected_file_type_icon_set"
+            type="list"
+			showon="use_file_type_symbols:1"
+            class="inputbox"
+            default="2"
+			multiple="false"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_ICON_SET"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_ICON_SET_DESC"
+            >
+            <option value="1">COM_JDOWNLOADS_ICON_SET_1</option>
+            <option value="2">COM_JDOWNLOADS_ICON_SET_2</option>
+			<option value="3">COM_JDOWNLOADS_ICON_SET_3</option>
+        </field>
+		
+		<field
+            name="file_pic_default_filename" 
+            type="JDFileIconConfig"
+			showon="selected_file_type_icon_set:1[AND]use_file_type_symbols:1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_DEFAULT_FILE_PIC_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_DEFAULT_FILE_PIC_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            class="inputbox"
+            default="unknown.png"
+            hide_default="true"
+            directory="images/jdownloads/fileimages/" 
+            filter="\.png$|\.gif$|\.jpg$|\.bmp$" 
+        />
+
+		<field
+            name="file_pic_default_filename1" 
+            type="JDFileIconConfig1"
+			showon="selected_file_type_icon_set:2[AND]use_file_type_symbols:1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_DEFAULT_FILE_PIC_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_DEFAULT_FILE_PIC_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            class="inputbox"
+            default="unknown.png"
+            hide_default="true"
+            directory="images/jdownloads/fileimages/flat_1/" 
+            filter="\.png$|\.gif$|\.jpg$|\.bmp$" 
+        />
+		
+		<field
+            name="file_pic_default_filename2" 
+            type="JDFileIconConfig2"
+			showon="selected_file_type_icon_set:3[AND]use_file_type_symbols:1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_DEFAULT_FILE_PIC_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_DEFAULT_FILE_PIC_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            class="inputbox"
+            default="unknown.png"
+            hide_default="true"
+            directory="images/jdownloads/fileimages/flat_2/" 
+            filter="\.png$|\.gif$|\.jpg$|\.bmp$" 
+        />		
+        
+        <field
+            name="file_pic_size" 
+            type="text"
+			showon="use_file_type_symbols:1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_FILEPICS_SIZE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_FILEPICS_SIZE_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="2"
+            default="32" 
+        />
+        
+        <field
+            name="file_pic_size_height" 
+            type="text"
+			showon="use_file_type_symbols:1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_FILEPICS_SIZE2"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FRONTEND_FILEPICS_SIZE_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="2"
+            default="32" 
+        />
+        
+		<field name="note60e" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_IMAGES_FEATURED" />
+
+         <field
+            name="featured_pic_filename" 
+            type="JDFeaturedIconConfig"
+            label="COM_JDOWNLOADS_SETTINGS_FRONTEND_FEATURED_TITLE"
+            description="COM_JDOWNLOADS_SETTINGS_FRONTEND_FEATURED_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            class="inputbox"
+            default="featured_orange_star.png"
+            hide_default="true"
+            directory="images/jdownloads/featuredimages/" 
+            filter="\.png$|\.gif$|\.jpg$|\.bmp$"
+        />
+        
+        <field
+            name="featured_pic_size" 
+            type="text"
+            label="COM_JDOWNLOADS_SETTINGS_FRONTEND_FEATURED_PIC_SIZE"
+            description="COM_JDOWNLOADS_SETTINGS_FRONTEND_FEATURED_PIC_SIZE_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="2"
+            default="48" 
+        />
+        
+        <field
+            name="featured_pic_size_height" 
+            type="text"
+            label="COM_JDOWNLOADS_SETTINGS_FRONTEND_FEATURED_PIC_SIZE2"
+            description="COM_JDOWNLOADS_SETTINGS_FRONTEND_FEATURED_PIC_SIZE_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="2"
+            default="48" 
+        />
+		
+		<field
+            name="use_featured_classes"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_FEATURED_CLASSES"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_FEATURED_CLASSES_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field name="note61a" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_CSS_BUTTONS_HEAD" />
+        
+        <field name="css_menu_button_color"
+            type="JDCssButtonConfig"
+            label="COM_JDOWNLOADS_SETTINGS_MENU_BUTTON_COLOR"
+            description="COM_JDOWNLOADS_SETTINGS_MENU_BUTTON_COLOR_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            csstype="colors"
+            hint="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_BUTTON_EXAMPLE"
+            default="jblue"
+            >
+            <option value="none">COM_JDOWNLOADS_NONE</option>
+            <option value="jblack">COM_JDOWNLOADS_BUTTON_BLACK</option>
+            <option value="jwhite">COM_JDOWNLOADS_BUTTON_WHITE</option>
+            <option value="jgray">COM_JDOWNLOADS_BUTTON_GRAY</option>
+            <option value="jorange">COM_JDOWNLOADS_BUTTON_ORANGE</option>
+            <option value="jred">COM_JDOWNLOADS_BUTTON_RED</option>
+            <option value="jblue">COM_JDOWNLOADS_BUTTON_BLUE</option>
+            <option value="jgreen">COM_JDOWNLOADS_BUTTON_GREEN</option>
+            <option value="jrosy">COM_JDOWNLOADS_BUTTON_ROSY</option>
+            <option value="jpink">COM_JDOWNLOADS_BUTTON_PINK</option>
+        </field>
+        
+        <field name="css_menu_button_size"
+            type="JDCssButtonConfig"
+            label="COM_JDOWNLOADS_SETTINGS_MENU_BUTTON_SIZE"
+            description=""
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            csstype="sizes"
+            hint="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_BUTTON_EXAMPLE_SIZE"
+            default=""
+            >
+            <option value="">COM_JDOWNLOADS_BUTTON_STANDARD</option>
+            <option value="jmedium">COM_JDOWNLOADS_BUTTON_MEDIUM</option>
+            <option value="jsmall">COM_JDOWNLOADS_BUTTON_SMALL</option>
+        </field>
+        
+        <field name="note61b" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_CSS_BUTTONS_DOWNLOAD" />        
+        
+        <field name="css_button_color_download"
+            type="JDCssButtonConfig"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_DOWNLOAD_BUTTON"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_DOWNLOAD_BUTTON_INFO"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            csstype="colors"
+            hint="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_BUTTON_EXAMPLE"
+            default="jorange"
+            >
+            <option value="none">COM_JDOWNLOADS_NONE</option>
+            <option value="jblack">COM_JDOWNLOADS_BUTTON_BLACK</option>
+            <option value="jwhite">COM_JDOWNLOADS_BUTTON_WHITE</option>
+            <option value="jgray">COM_JDOWNLOADS_BUTTON_GRAY</option>
+            <option value="jorange">COM_JDOWNLOADS_BUTTON_ORANGE</option>
+            <option value="jred">COM_JDOWNLOADS_BUTTON_RED</option>
+            <option value="jblue">COM_JDOWNLOADS_BUTTON_BLUE</option>
+            <option value="jgreen">COM_JDOWNLOADS_BUTTON_GREEN</option>
+            <option value="jrosy">COM_JDOWNLOADS_BUTTON_ROSY</option>
+            <option value="jpink">COM_JDOWNLOADS_BUTTON_PINK</option>
+        </field>
+        
+        <field name="css_button_size_download"
+            type="JDCssButtonConfig"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_DOWNLOAD_BUTTON_SIZE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_DOWNLOAD_BUTTON_INFO2"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            csstype="sizes"
+            hint="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_BUTTON_EXAMPLE_SIZE"
+            default=""
+            >
+            <option value="">COM_JDOWNLOADS_BUTTON_STANDARD</option>
+            <option value="jmedium">COM_JDOWNLOADS_BUTTON_MEDIUM</option>
+            <option value="jsmall">COM_JDOWNLOADS_BUTTON_SMALL</option>
+        </field>
+        
+        <field name="css_button_size_download_small"
+            type="JDCssButtonConfig"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_DOWNLOAD_BUTTON_SIZE_SMALL"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_DOWNLOAD_BUTTON_SMALL_INFO"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            csstype="sizes"
+            hint="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_BUTTON_EXAMPLE_SIZE"
+            default=""
+            >
+            <option value="">COM_JDOWNLOADS_BUTTON_STANDARD</option>
+            <option value="jmedium">COM_JDOWNLOADS_BUTTON_MEDIUM</option>
+            <option value="jsmall">COM_JDOWNLOADS_BUTTON_SMALL</option>
+        </field>        
+
+        <field name="note61c" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_CSS_BUTTONS_MIRROR" />
+        
+        <field name="css_button_color_mirror1"
+            type="JDCssButtonConfig"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_MIRROR_1_BUTTON"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_MIRROR_BUTTON_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            csstype="colors"
+            hint="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_BUTTON_EXAMPLE"
+            default="jgray"
+            >
+            <option value="none">COM_JDOWNLOADS_NONE</option>
+            <option value="jblack">COM_JDOWNLOADS_BUTTON_BLACK</option>
+            <option value="jwhite">COM_JDOWNLOADS_BUTTON_WHITE</option>
+            <option value="jgray">COM_JDOWNLOADS_BUTTON_GRAY</option>
+            <option value="jorange">COM_JDOWNLOADS_BUTTON_ORANGE</option>
+            <option value="jred">COM_JDOWNLOADS_BUTTON_RED</option>
+            <option value="jblue">COM_JDOWNLOADS_BUTTON_BLUE</option>
+            <option value="jgreen">COM_JDOWNLOADS_BUTTON_GREEN</option>
+            <option value="jrosy">COM_JDOWNLOADS_BUTTON_ROSY</option>
+            <option value="jpink">COM_JDOWNLOADS_BUTTON_PINK</option>
+        </field>
+        
+        <field name="css_button_color_mirror2"
+            type="JDCssButtonConfig"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_MIRROR_2_BUTTON"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_MIRROR_BUTTON_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            csstype="colors"
+            hint="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_BUTTON_EXAMPLE"
+            default="jgray"
+            >
+            <option value="none">COM_JDOWNLOADS_NONE</option>
+            <option value="jblack">COM_JDOWNLOADS_BUTTON_BLACK</option>
+            <option value="jwhite">COM_JDOWNLOADS_BUTTON_WHITE</option>
+            <option value="jgray">COM_JDOWNLOADS_BUTTON_GRAY</option>
+            <option value="jorange">COM_JDOWNLOADS_BUTTON_ORANGE</option>
+            <option value="jred">COM_JDOWNLOADS_BUTTON_RED</option>
+            <option value="jblue">COM_JDOWNLOADS_BUTTON_BLUE</option>
+            <option value="jgreen">COM_JDOWNLOADS_BUTTON_GREEN</option>
+            <option value="jrosy">COM_JDOWNLOADS_BUTTON_ROSY</option>
+            <option value="jpink">COM_JDOWNLOADS_BUTTON_PINK</option>
+        </field>                
+
+        <field name="css_button_size_download_mirror"
+            type="JDCssButtonConfig"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_MIRROR_BUTTON_SIZE"
+            description=""
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            csstype="sizes"
+            hint="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_BUTTON_EXAMPLE_SIZE"
+            default=""
+            >
+            <option value="">COM_JDOWNLOADS_BUTTON_STANDARD</option>
+            <option value="jmedium">COM_JDOWNLOADS_BUTTON_MEDIUM</option>
+            <option value="jsmall">COM_JDOWNLOADS_BUTTON_SMALL</option>
+        </field>
+
+        <field name="note61d" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_CSS_BUTTONS_FONT" />
+        
+        <field
+            name="css_buttons_with_font_symbols"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_SETTINGS_BUTTONS_WITH_FONT_SYMBOLS"
+            description="COM_JDOWNLOADS_SETTINGS_BUTTONS_WITH_FONT_SYMBOLS_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>        
+        
+        <field name="note61e" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_CSS_BUTTONS_HOT" />
+        
+        <field name="css_button_color_hot"
+            type="JDCssButtonConfig"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_HOT_BUTTON"
+            description=""
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            csstype="status"
+            hint="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_BUTTON_EXAMPLE"
+            default="jred"
+            >
+            <option value="none">COM_JDOWNLOADS_NONE</option>
+            <option value="jblack">COM_JDOWNLOADS_BUTTON_BLACK</option>
+            <option value="jwhite">COM_JDOWNLOADS_BUTTON_WHITE</option>
+            <option value="jgray">COM_JDOWNLOADS_BUTTON_GRAY</option>
+            <option value="jorange">COM_JDOWNLOADS_BUTTON_ORANGE</option>
+            <option value="jred">COM_JDOWNLOADS_BUTTON_RED</option>
+            <option value="jblue">COM_JDOWNLOADS_BUTTON_BLUE</option>
+            <option value="jgreen">COM_JDOWNLOADS_BUTTON_GREEN</option>
+            <option value="jrosy">COM_JDOWNLOADS_BUTTON_ROSY</option>
+            <option value="jpink">COM_JDOWNLOADS_BUTTON_PINK</option>
+        </field> 
+        
+        <field name="css_button_color_new"
+            type="JDCssButtonConfig"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_NEW_BUTTON"
+            description=""
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            csstype="status"
+            hint="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_BUTTON_EXAMPLE"
+            default="jgreen"
+            >
+            <option value="none">COM_JDOWNLOADS_NONE</option>
+            <option value="jblack">COM_JDOWNLOADS_BUTTON_BLACK</option>
+            <option value="jwhite">COM_JDOWNLOADS_BUTTON_WHITE</option>
+            <option value="jgray">COM_JDOWNLOADS_BUTTON_GRAY</option>
+            <option value="jorange">COM_JDOWNLOADS_BUTTON_ORANGE</option>
+            <option value="jred">COM_JDOWNLOADS_BUTTON_RED</option>
+            <option value="jblue">COM_JDOWNLOADS_BUTTON_BLUE</option>
+            <option value="jgreen">COM_JDOWNLOADS_BUTTON_GREEN</option>
+            <option value="jrosy">COM_JDOWNLOADS_BUTTON_ROSY</option>
+            <option value="jpink">COM_JDOWNLOADS_BUTTON_PINK</option>
+        </field>
+        
+        <field name="css_button_color_updated"
+            type="JDCssButtonConfig"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SELECT_UPDATED_BUTTON"
+            description=""
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            csstype="status"
+            hint="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_BUTTON_EXAMPLE"
+            default="jblue"
+            >
+            <option value="none">COM_JDOWNLOADS_NONE</option>
+            <option value="jblack">COM_JDOWNLOADS_BUTTON_BLACK</option>
+            <option value="jwhite">COM_JDOWNLOADS_BUTTON_WHITE</option>
+            <option value="jgray">COM_JDOWNLOADS_BUTTON_GRAY</option>
+            <option value="jorange">COM_JDOWNLOADS_BUTTON_ORANGE</option>
+            <option value="jred">COM_JDOWNLOADS_BUTTON_RED</option>
+            <option value="jblue">COM_JDOWNLOADS_BUTTON_BLUE</option>
+            <option value="jgreen">COM_JDOWNLOADS_BUTTON_GREEN</option>
+            <option value="jrosy">COM_JDOWNLOADS_BUTTON_ROSY</option>
+            <option value="jpink">COM_JDOWNLOADS_BUTTON_PINK</option>
+        </field>
+                
+        <field name="note66" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_SHOW_SYMBOL_HEAD" />
+        
+        <field
+            name="days_is_file_new" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_NEW_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_NEW_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="5"
+            default="15"
+        />
+        
+        <field
+            name="loads_is_file_hot" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_HOT_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_HOT_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="6"
+            default="100"
+        />
+        
+        <field
+            name="days_is_file_updated" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_UPD_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_UPD_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="15"
+        />         
+        
+        <field name="note67" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_THUMBNAILS_HEAD" />
+        
+        <field name="note68" type="note" class="alert alert-info" label="" description="COM_JDOWNLOADS_CONFIG_SETTINGS_THUMBS_INFO" />
+        
+		<field name="note68x" type="JDGDStatusConfig" description="COM_JDOWNLOADS_CONFIG_SETTINGS_THUMBS_INFO" />
+        
+        <field
+            name="create_auto_thumbs_from_pics"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_CREATE_AUTO_THUMBS_BY_PICS_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_CREATE_AUTO_THUMBS_BY_PICS_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="create_auto_thumbs_from_pics_by_scan"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_CREATE_AUTO_THUMBS_BY_PICS_SCAN_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_CREATE_AUTO_THUMBS_BY_PICS_SCAN_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="thumbnail_size_height" 
+            type="text"
+            label="COM_JDOWNLOADS_CONFIG_SETTINGS_THUMBS_SIZE_HEIGHT"
+            description="COM_JDOWNLOADS_CONFIG_SETTINGS_THUMBS_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="125"
+        />        
+        
+        <field
+            name="thumbnail_size_width" 
+            type="text"
+            label="COM_JDOWNLOADS_CONFIG_SETTINGS_THUMBS_SIZE_WIDTH"
+            description="COM_JDOWNLOADS_CONFIG_SETTINGS_THUMBS_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="125"
+        />        
+
+        <field
+            name="create_auto_thumbs_from_pics_image_height" 
+            type="text"
+            label="COM_JDOWNLOADS_CONFIG_SETTINGS_PDF_BIG_THUMBS_HEIGHT"
+            description="COM_JDOWNLOADS_CONFIG_SETTINGS_BIG_IMAGES_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="400"
+        />  
+        
+        <field
+            name="create_auto_thumbs_from_pics_image_width" 
+            type="text"
+            label="COM_JDOWNLOADS_CONFIG_SETTINGS_PDF_BIG_THUMBS_WIDTH"
+            description="COM_JDOWNLOADS_CONFIG_SETTINGS_BIG_IMAGES_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="400"
+        />  
+		
+
+        <field
+            name="resize_thumbs"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_CONFIG_SETTINGS_THUMBS_CREATE_ALL_NEW_TITLE"
+            description="COM_JDOWNLOADS_CONFIG_SETTINGS_THUMBS_CREATE_ALL_NEW_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field name="note61h" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_CSS_BUTTONS_IMAGEMAGIC" />
+        
+        <field name="note168" type="JDImagickStatusConfig" description="" />
+        
+        <field
+            name="create_pdf_thumbs"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_CREATE_PDF_THUMB_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_CREATE_PDF_THUMB_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="create_pdf_thumbs_by_scan"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_CREATE_AUTO_THUMBS_BY_PICS_SCAN_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_CREATE_PDF_THUMB_SCAN_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field> 
+        
+        <field
+            name="pdf_thumb_image_type"
+            type="list"
+            label="COM_JDOWNLOADS_CONFIG_SETTINGS_PDF_THUMBS_IMAGE_TYPE_TITLE"
+            description="COM_JDOWNLOADS_CONFIG_SETTINGS_PDF_THUMBS_IMAGE_TYPE"
+            multiple="false"
+            default="GIF"
+            >
+            <option value="GIF">GIF</option>
+            <option value="PNG">PNG</option>
+            <option value="JPG">JPG</option>
+        </field>        
+        
+        <field
+            name="pdf_thumb_height" 
+            type="text"
+            label="COM_JDOWNLOADS_CONFIG_SETTINGS_PDF_THUMBS_HEIGHT"
+            description="COM_JDOWNLOADS_CONFIG_SETTINGS_PDF_THUMBS_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="200"
+        />          
+                        
+        <field
+            name="pdf_thumb_width" 
+            type="text"
+            label="COM_JDOWNLOADS_CONFIG_SETTINGS_PDF_THUMBS_WIDTH"
+            description="COM_JDOWNLOADS_CONFIG_SETTINGS_PDF_THUMBS_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="200"
+        />
+        
+        <field
+            name="pdf_thumb_pic_height" 
+            type="text"
+            label="COM_JDOWNLOADS_CONFIG_SETTINGS_PDF_BIG_THUMBS_HEIGHT"
+            description="COM_JDOWNLOADS_CONFIG_SETTINGS_BIG_IMAGES_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="400"
+        />
+        
+        <field
+            name="pdf_thumb_pic_width" 
+            type="text"
+            label="COM_JDOWNLOADS_CONFIG_SETTINGS_PDF_BIG_THUMBS_WIDTH"
+            description="COM_JDOWNLOADS_CONFIG_SETTINGS_BIG_IMAGES_DESC"
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="400"
+        />                        
+
+        <field name="note61g" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_CSS_BUTTONS_SCREENSHOT" />
+        
+        <field
+            name="thumbnail_view_placeholder"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_PLACEHOLDER_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_PLACEHOLDER_TEXT"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field> 
+        
+        <field
+            name="thumbnail_view_placeholder_in_lists"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_PLACEHOLDER_IN_LIST_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_VIEW_PLACEHOLDER_IN_LIST_TEXT"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field name="note169" type="JDPlaceholderImageConfig" description="" />                         
+    
+    </fieldset>   
+
+    <fieldset name="mediaplayer"
+        label="COM_JDOWNLOADS_BACKEND_SETTINGS_MEDIA_TAB_TITLE"
+        description="COM_JDOWNLOADS_BACKEND_SETTINGS_MEDIA_TAB_TITLE">
+    
+        <field name="note20" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_HTML5_DESC" />
+
+        <field
+            name="html5player_use"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_HTML5_USE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_HTML5_USE_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+    
+        <field
+            name="html5player_view_video_only_in_details"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FLOW_BOX_ONLY_IN_DETAILS_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FLOW_BOX_ONLY_IN_DETAILS_DESC"
+            showon="html5player_use:1"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>    
+    
+        <field
+            name="html5player_width" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_HTML5_BOX_WIDTH_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_HTML5_BOX_WIDTH_DESC"
+            showon="html5player_use:1"
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="320" 
+        /> 
+        
+        <field
+            name="html5player_height" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_HTML5_BOX_HEIGHT_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_HTML5_BOX_HEIGHT_DESC"
+            showon="html5player_use:1"
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="240" 
+        />   
+    
+        <field
+            name="html5player_audio_width" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_HTML5_BOX_AUDIO_WIDTH_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_HTML5_BOX_AUDIO_WIDTH_DESC"
+            showon="html5player_use:1"            
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="300" 
+        />   
+
+        <field name="note21" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_MEDIA_DESC" />
+                
+        <field
+            name="flowplayer_use"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FLOW_USE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FLOW_USE_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+    
+        <field
+            name="flow5player_view_video_only_in_details"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FLOW_BOX_ONLY_IN_DETAILS_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FLOW_BOX_ONLY_IN_DETAILS_DESC"
+            showon="flowplayer_use:1"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>    
+    
+        <field
+            name="flowplayer_playerwidth" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FLOW_BOX_WIDTH_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FLOW_BOX_WIDTH_DESC"
+            showon="flowplayer_use:1"
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="300" 
+        /> 
+        
+        <field
+            name="flowplayer_playerheight" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FLOW_BOX_HEIGHT_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FLOW_BOX_HEIGHT_DESC"
+            showon="flowplayer_use:1"
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="200" 
+        />   
+    
+        <field
+            name="flowplayer_playerheight_audio" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FLOW_BOX_HEIGHT_MP3_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FLOW_BOX_HEIGHT_MP3_DESC"
+            showon="flowplayer_use:1"            
+            filter="integer"
+            class="inputbox"
+            maxlength="4"
+            default="30" 
+        />         
+
+		<field name="note21b" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_MP3_CONFIG_VIEW_ID3_HEADER" />
+                
+        <field
+            name="mp3_view_id3_info"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_MP3_CONFIG_VIEW_ID3_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_MP3_CONFIG_VIEW_ID3_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+		
+		<field
+            name="mp3_info_layout" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_MP3_CONFIG_VIEW_ID3_LAY_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_MP3_CONFIG_VIEW_ID3_LAY_DESC"
+            showon="mp3_view_id3_info:1" 
+            filter="raw"
+            class="inputbox"
+        />
+    
+    </fieldset>
+    
+    <fieldset name="uploads"
+        label="COM_JDOWNLOADS_BACKEND_SETTINGS_FE_UPLOAD_TAB_TITLE"
+        description="COM_JDOWNLOADS_UPLOADER_TITLE_HEAD"
+		addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field">
+     
+        <field name="note81" type="note" class="alert alert-info" description="COM_JDOWNLOADS_UPLOADER_DESC2" />
+     
+        <field
+            name="plupload_runtime" 
+            type="list"
+            label="COM_JDOWNLOADS_UPLOADER_RUNTIME_LABEL"
+            description="COM_JDOWNLOADS_UPLOADER_RUNTIME_LABEL_DESC">
+            <option value="full">COM_JDOWNLOADS_UPLOADER_RUNTIME_ALL</option>
+            <option value="html5">COM_JDOWNLOADS_UPLOADER_RUNTIME_HTML5</option>
+            <option value="flash">COM_JDOWNLOADS_UPLOADER_RUNTIME_FLASH</option>
+            <option value="gears">COM_JDOWNLOADS_UPLOADER_RUNTIME_GEARS</option>
+            <option value="silverlight">COM_JDOWNLOADS_UPLOADER_RUNTIME_SILVERLIGHT</option>
+            <option value="browserplus">COM_JDOWNLOADS_UPLOADER_RUNTIME_BROSWERPLUS</option>
+            <option value="html4">COM_JDOWNLOADS_UPLOADER_RUNTIME_HTML4</option>
+        </field>
+        
+        <field
+            name="plupload_max_file_size" 
+            type="text"
+            label="COM_JDOWNLOADS_UPLOADER_MAX_FILE_SIZE"
+            description="COM_JDOWNLOADS_UPLOADER_MAX_FILE_SIZE_DESC"
+            required="true"
+            filter="integer"
+            class="inputbox"
+            default="10"
+            maxlength="5"
+        /> 
+        
+        <field name="note82" type="JDMaxFileSizeConfigField" label="" description="COM_JDOWNLOADS_UPLOAD_MAX_FILESIZE_INFO_TITLE" />
+
+        <field
+            name="plupload_chunk_size" 
+            type="text"
+            label="COM_JDOWNLOADS_UPLOADER_CHUNK_SIZE"
+            description="COM_JDOWNLOADS_UPLOADER_CHUNK_SIZE_DESC"
+            filter="integer"
+            class="inputbox"
+            default="0"
+            maxlength="10" 
+        /> 
+
+        <field
+            name="plupload_chunk_unit" 
+            type="list"
+            label="COM_JDOWNLOADS_UPLOADER_CHUNK_UNIT"
+            description="COM_JDOWNLOADS_UPLOADER_CHUNK_UNIT_DESC"
+            default="mb" >
+            <option value="b">Byte</option>
+            <option value="kb">Kilobyte</option>
+            <option value="mb">Megabyte</option>
+        </field>
+
+        <field
+            name="plupload_image_file_extensions" 
+            type="text"
+            label="COM_JDOWNLOADS_UPLOADER_IMAGE_FILE_EXTENSIONS"
+            description="COM_JDOWNLOADS_UPLOADER_IMAGE_FILE_EXTENSIONS_DESC"
+            filter="string"
+            required="false"
+            class="inputbox"
+            default="gif,png,jpg,jpeg"    
+            maxlength="300"
+        />
+
+        <field
+            name="plupload_other_file_extensions" 
+            type="text"
+            label="COM_JDOWNLOADS_UPLOADER_OTHER_FILE_EXTENSIONS"
+            description="COM_JDOWNLOADS_UPLOADER_OTHER_FILE_EXTENSIONS_DESC"
+            filter="string"
+            required="false"
+            class="inputbox"
+            default="zip,rar,pdf,doc,txt"    
+            maxlength="300"
+        />
+        
+        <field
+            name="plupload_rename"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_UPLOADER_RENAME"
+            description="COM_JDOWNLOADS_UPLOADER_RENAME_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="plupload_unique_names"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_UPLOADER_UNIQUE_NAMES"
+            description="COM_JDOWNLOADS_UPLOADER_UNIQUE_NAMES_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="plupload_enable_image_resizing"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_UPLOADER_ENABLE_IMAGE_RESIZING"
+            description="COM_JDOWNLOADS_UPLOADER_ENABLE_IMAGE_RESIZING_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="plupload_resize_width" 
+            type="text"
+            label="COM_JDOWNLOADS_UPLOADER_RESIZE_WIDTH"
+            description="COM_JDOWNLOADS_UPLOADER_RESIZE_WIDTH_DESC"
+            filter="integer"
+            class="inputbox"
+            default="640"
+            maxlength="5"
+            showon="plupload_enable_image_resizing:1" 
+        />         
+        
+        <field
+            name="plupload_resize_height" 
+            type="text"
+            label="COM_JDOWNLOADS_UPLOADER_RESIZE_HEIGHT"
+            description="COM_JDOWNLOADS_UPLOADER_RESIZE_HEIGHT_DESC"
+            filter="integer"
+            class="inputbox"
+            default="480"
+            maxlength="5" 
+            showon="plupload_enable_image_resizing:1" 
+        />
+        
+        <field
+            name="plupload_resize_quality" 
+            type="text"
+            label="COM_JDOWNLOADS_UPLOADER_RESIZE_QUALITY"
+            description="COM_JDOWNLOADS_UPLOADER_RESIZE_QUALITY_DESC"
+            filter="integer"
+            class="inputbox"
+            default="90"
+            maxlength="3" 
+            showon="plupload_enable_image_resizing:1" 
+        />
+                        
+        <field
+            name="plupload_enable_uploader_log"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_UPLOADER_ENABLE_LOG"
+            description="COM_JDOWNLOADS_UPLOADER_ENABLE_LOG_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+    </fieldset>
+
+    <fieldset name="files_and_folders"
+        label="COM_JDOWNLOADS_BACKEND_SETTINGS_TAB_FILES_FOLDERS"
+        description="COM_JDOWNLOADS_BACKEND_SETTINGS_TAB_FILES_FOLDERS">
+		
+		<field name="note81cam" type="note" description="COM_JDOWNLOADS_CONFIG_FILES_AND_FOLDERS_TITLE_DESC" class="alert alert-info" />
+    
+        <field
+            name="create_auto_cat_dir"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_CONFIG_CREATE_AUTO_DIR_NAME_TITLE"
+            description="COM_JDOWNLOADS_CONFIG_CREATE_AUTO_DIR_NAME_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="use_unicode_path_names"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_UNICODE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_USE_UNICODE_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+		
+		<field
+            name="transliterate_at_first"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_CONFIG_UPLOAD_TRANSLITERATE_TITLE"
+            description="COM_JDOWNLOADS_CONFIG_UPLOAD_TRANSLITERATE_DESC"
+			showon="use_unicode_path_names:0"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="fix_upload_filename_specials"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_CONFIG_UPLOAD_FILENAME_SPECIAL_TITLE"
+            description="COM_JDOWNLOADS_CONFIG_UPLOAD_FILENAME_SPECIAL_DESC"
+			showon="use_unicode_path_names:0"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="fix_upload_filename_blanks"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_CONFIG_UPLOAD_FILENAME_BLANK_TITLE"
+            description="COM_JDOWNLOADS_CONFIG_UPLOAD_FILENAME_BLANK_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="fix_upload_filename_uppercase"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_CONFIG_UPLOAD_FILENAME_LOW_TITLE"
+            description="COM_JDOWNLOADS_CONFIG_UPLOAD_FILENAME_LOW_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="use_files_and_folder_settings_for_monitoring"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_CONFIG_USE_FOLDER_FILE_SETTINGS_FOR_MONITORING_TITLE"
+            description="COM_JDOWNLOADS_CONFIG_USE_FOLDER_FILE_SETTINGS_FOR_MONITORING_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+    </fieldset>    
+    
+    <fieldset name="security"
+        label="COM_JDOWNLOADS_BACKEND_SETTINGS_TABTEXT_SECURITY"
+        description="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_SECURITY_HEAD">
+    
+        <field
+            name="anti_leech"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_ANTILEECH_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_ANTILEECH_DESK"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="check_leeching"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_STOP_LEECHING_OPTION_TITLE"
+            description="COM_JDOWNLOADS_STOP_LEECHING_OPTION_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="allowed_leeching_sites" 
+            type="textarea"
+            label="COM_JDOWNLOADS_STOP_LEECHING_ALLOWED_SITES_OPTION_TITLE"
+            description="COM_JDOWNLOADS_STOP_LEECHING_ALLOWED_SITES_OPTION_DESC"
+            filter="raw"
+            class="inputbox"
+        />
+		
+		<field
+            name="block_referer_is_empty"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_STOP_LEECHING_OPTION_NO_REFERER_TITLE"
+            description="COM_JDOWNLOADS_STOP_LEECHING_OPTION_NO_REFERER_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="mail_cloaking"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_MAIL_SECURITY_TITEL"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_MAIL_SECURITY_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="use_blocking_list"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_USE_BLACKLIST_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_USE_BLACKLIST_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="blocking_list" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_BLACKLIST_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_BLACKLIST_DESC"
+            showon="use_blocking_list:1" 
+            filter="string"
+            class="inputbox"
+        />
+        
+    </fieldset>
+    
+    <fieldset name="emails"
+        label="COM_JDOWNLOADS_BACKEND_SETTINGS_TABTEXT_EMAIL"
+        description="COM_JDOWNLOADS_BACKEND_SETTINGS_TABTEXT_EMAIL">
+    
+        <field name="note40" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_MAIL_HEAD" />
+        
+        <field
+            name="send_mailto_option"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_OPTION"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_OPTION_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="send_mailto_html"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_HTML"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_HTML_DESC"
+            showon="send_mailto_option:1"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="send_mailto_betreff" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_BETREFF"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_BETREFF_DESC"
+            showon="send_mailto_option:1"            
+            filter="string"
+            class="inputbox"
+            maxlength="250"
+            default="" 
+        />
+        
+        <field
+            name="send_mailto" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_DESC"
+            showon="send_mailto_option:1" 
+            filter="string"
+            class="inputbox"
+            default=""
+        />
+        
+        <field
+            name="send_mailto_template_download" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_MAIL_UPLOAD_TEMPLATE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_TEMPLATES_MAIL_DESC"
+            showon="send_mailto_option:1" 
+            filter="raw"
+            class="inputbox"
+            default=""
+        />        
+        
+        <field name="note41" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_MAIL_UPLOAD_HEAD" />
+        
+        <field
+            name="send_mailto_option_upload"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_OPTION"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_OPTION_UPLOAD_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="send_mailto_html_upload"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_HTML"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_HTML_DESC"
+            showon="send_mailto_option_upload:1"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="send_mailto_betreff_upload" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_BETREFF"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_BETREFF_DESC"
+            showon="send_mailto_option_upload:1"            
+            filter="string"
+            class="inputbox"
+            maxlength="250"
+            default="" 
+        />
+        
+        <field
+            name="send_mailto_upload" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_UPLOAD_DESC"
+            showon="send_mailto_option_upload:1" 
+            filter="string"
+            class="inputbox"
+            default=""
+        />
+        
+        <field
+            name="send_mailto_template_upload" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_MAIL_UPLOAD_TEMPLATE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_MAIL_UPLOAD_TEMPLATE_DESC"
+            showon="send_mailto_option_upload:1" 
+            filter="raw"
+            class="inputbox"
+            default=""
+        />
+        
+        <field name="note42" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_MAIL_REPORT_HEAD" />
+        <field name="note43" type="note" description="COM_JDOWNLOADS_CONFIG_REPORT_FILE_INFO" class="alert alert-info"/> " 
+        
+        <field
+            name="report_mail_subject" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_BETREFF"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_BETREFF_DESC"
+            filter="string"
+            class="inputbox"
+            maxlength="250"
+            default="" 
+        />
+        
+        <field
+            name="send_mailto_report" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO"
+            description="COM_JDOWNLOADS_CONFIG_REPORT_FILE_MAIL_DESC"
+            filter="string"
+            class="inputbox"
+            default=""
+        />
+        
+        <field
+            name="report_mail_layout" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_MAIL_UPLOAD_TEMPLATE_TITLE"
+            description="COM_JDOWNLOADS_CONFIG_REPORT_FILE_MAIL_LAYOUT_DESC"
+            filter="raw"
+            class="inputbox"
+            default=""
+        />
+        
+        <field name="note44" type="note" label="COM_JDOWNLOADS_CONFIG_CUSTOMERS_FORM_HEAD" />
+        <field name="note45" type="note" description="COM_JDOWNLOADS_CONFIG_CUSTOMERS_FORM_INFO" class="alert alert-info"/> " 
+        
+        <field
+            name="customers_mail_subject" 
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_BETREFF"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO_BETREFF_DESC"
+            filter="string"
+            class="inputbox"
+            maxlength="250"
+            default="" 
+        />
+        
+        <field
+            name="customers_send_mailto" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_SEND_MAILTO"
+            description="COM_JDOWNLOADS_CONFIG_CUSTOMERS_FORM_MAIL_DESC"
+            filter="string"
+            class="inputbox"
+            default=""
+        />
+        
+        <field
+            name="customers_mail_layout" 
+            type="textarea"
+            label="COM_JDOWNLOADS_CONFIG_CUSTOMERS_FORM_MAIL_LAYOUT"
+            description="COM_JDOWNLOADS_CONFIG_CUSTOMERS_FORM_MAIL_LAYOUT_DESC"
+            filter="raw"
+            class="inputbox"
+            default=""
+        />        
+    </fieldset>
+    
+    <fieldset name="specials"
+        label="COM_JDOWNLOADS_BACKEND_SETTINGS_TABTEXT_SPECIALS"
+        description="COM_JDOWNLOADS_BACKEND_SETTINGS_TABTEXT_SPECIALS">
+    
+		<field name="note48" type="note" label="COM_JDOWNLOADS_BACKEND_SET_CART_HEADER" />
+
+        <field
+            name="use_shopping_cart_plugin"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SET_CART_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SET_CART_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>        
+    
+        <field name="note49" type="note" label="COM_JDOWNLOADS_BACKEND_SET_AUP_HEADER" />
+        <field name="note50" type="note" description="COM_JDOWNLOADS_BACKEND_SET_AUP_HEADER_TEXT" class="alert alert-info"/> " 
+        
+        <field
+            name="use_alphauserpoints"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SET_AUP_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SET_AUP_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+
+        <field
+            name="use_alphauserpoints_with_price_field"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SET_AUP_USE_FILE_PRICE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SET_AUP_USE_FILE_PRICE_DESC"
+            showon="use_alphauserpoints:1"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="user_message_when_zero_points" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SET_AUP_FE_MESSAGE_NO_DOWNLOAD_EDIT"
+            description="COM_JDOWNLOADS_BACKEND_SET_AUP_FE_MESSAGE_NO_DOWNLOAD_DESC"
+            showon="use_alphauserpoints:1"
+            filter="string"
+            class="inputbox"
+        />
+        
+        <field name="note51" type="note" label="COM_JDOWNLOADS_BACKEND_SETTINGS_ADSENSE_TITLE" />
+        
+        <field
+            name="google_adsense_active"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_ADSENSE_ACTIVATE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_ADSENSE_ACTIVATE_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="google_adsense_code" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_ADSENSE_CODE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_ADSENSE_CODE_DESC"
+            showon="google_adsense_active:1"
+            filter="raw"
+            class="inputbox"
+        />
+        
+        <field
+            name="google_adsense_active_2"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="0"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_ADSENSE_ACTIVATE_TITLE2"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_ADSENSE_ACTIVATE_DESC2"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="google_adsense_code_2" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_ADSENSE_CODE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_ADSENSE_CODE_DESC"
+            showon="google_adsense_active_2:1"
+            filter="raw"
+            class="inputbox"
+        />
+        
+        <field name="note52" type="note" showon="com:" label="COM_JDOWNLOADS_BACKEND_POST_COM_ID_TITLE" />
+                
+        <field
+            name="com"
+            type="text"
+            label="COM_JDOWNLOADS_BACKEND_POST_COM_ID_TITLE2"
+            description="COM_JDOWNLOADS_BACKEND_POST_COM_ID_DESC"
+            filter="string"
+            class="inputbox"
+            maxlength="50"
+			showon="com:"
+        />
+    
+        <field
+            name="categories_batch_in_progress" 
+            type="hidden"
+            default="0"
+        />
+
+        <field
+            name="downloads_batch_in_progress" 
+            type="hidden"
+            default="0"
+        />
+        
+        <field
+            name="uncat_already_created" 
+            type="hidden"
+            default="0"
+        />
+    
+    </fieldset>         
+
+    <fieldset name="plugin"
+        label="COM_JDOWNLOADS_BACKEND_SETTINGS_TABTEXT_PLUGINS"
+        description="COM_JDOWNLOADS_BACKEND_SETTINGS_GLOBAL_FILEPLUGIN_HEAD"
+        addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field">
+        
+        <field
+            name="fileplugin_defaultlayout" 
+            type="JDFilesLayouts"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FILEPLUGIN_DEFAULTLAYOUT"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FILEPLUGIN_DEFAULTLAYOUT_DESC"
+			addfieldprefix="JDownloads\Component\JDownloads\Administrator\Field"
+            class="inputbox"
+        />
+    
+        <field
+            name="fileplugin_enable_plugin"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FILEPLUGIN_ENABLEPLUGIN"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FILEPLUGIN_ENABLEPLUGIN_DESC"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="fileplugin_show_jdfiledisabled"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FILEPLUGIN_SHOWDISABLED"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FILEPLUGIN_SHOWDISABLED_DESC"
+            showon="fileplugin_enable_plugin:0"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>            
+
+        <field
+            name="fileplugin_show_downloadtitle"
+            type="radio"
+            layout="joomla.form.field.radio.switcher"
+            default="1"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FILEPLUGIN_DOWNLOADTITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FILEPLUGIN_DOWNLOADTITLE_DESC"
+            showon="fileplugin_enable_plugin:0"
+            >
+            <option value="0">COM_JDOWNLOADS_NO</option>
+			<option value="1">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field
+            name="fileplugin_offline_title" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FILEPLUGIN_OFFLINETITLE"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FILEPLUGIN_OFFLINETITLE_DESC"
+            showon="fileplugin_show_downloadtitle:0[AND]fileplugin_enable_plugin:0"
+            filter="string"
+            class="inputbox"
+        />
+
+        <field
+            name="fileplugin_offline_descr" 
+            type="textarea"
+            label="COM_JDOWNLOADS_BACKEND_SETTINGS_FILEPLUGIN_OFFLINEDESC"
+            description="COM_JDOWNLOADS_BACKEND_SETTINGS_FILEPLUGIN_OFFLINEDESC_DESC"
+            showon="fileplugin_show_downloadtitle:0[AND]fileplugin_enable_plugin:0"
+            filter="string"
+            class="inputbox"
+        />
+        
+        <field
+            name="plugin_auto_file_short_description_value"
+            type="integer"
+            label="COM_JDOWNLOADS_BACKEND_USE_CUT_DESCRIPTION_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_USE_CUT_DESCRIPTION_TITLE_DESC"
+            first="0"
+            last="500"
+            step="50"
+            class="inputbox"
+            default="0"
+        /> 
+    
+    </fieldset> 
+        
+    <fieldset name="permissions"
+		description="JCONFIG_PERMISSIONS_DESC"
+		label="JCONFIG_PERMISSIONS_LABEL"
+	    >
+		<field name="rules" type="rules"
+			component="com_jdownloads"
+			filter="rules"
+			validate="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			section="component"
+			description=""
+		/>
+	</fieldset>
+</config>
