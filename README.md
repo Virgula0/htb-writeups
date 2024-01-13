@@ -19,7 +19,7 @@ Please take into consideration that these write-ups are primarily notes for myse
 
 ### Difficulty Medium
 
-- [Zipping](Zipping)
+- [Zipping](ZIPPING)
 - [Clicker](CLICKER)
 
 ### Difficulty Easy
