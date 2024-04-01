@@ -1,0 +1,3 @@
+nagiosadmin:{SHA}WafcJ8xiUKCvKhkZpBW1+oJm59Q=
+nagiosxi:{SHA}tu+2LQemR+XONdxwgApW0NB7qlM=
+svc:{SHA}PgRMQuGZauDk1dCs5W0lY/d2mHI=
